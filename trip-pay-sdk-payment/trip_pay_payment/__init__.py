@@ -15,7 +15,7 @@
 """  # noqa: E501
 
 
-__version__ = "0.0.1"
+__version__ = "0.0.2"
 
 # import apis into sdk package
 from trip_pay_payment.api.account_api import AccountApi
