@@ -4,37 +4,35 @@
 # release.sh
 #
 # A master release script to automate the SDK release workflow by invoking:
-#  1) generateSDKsFromOpenAPISpecs.sh
-#  2) github-release.sh
-#  3) pypi-release.sh
+#  1) generateSDKsFromOpenAPISpecs.sh  (generates new SDKs)
+#  2) commit the SDK changes (including version in the commit message)
+#  3) github-release.sh               (performs GitHub release)
+#  4) pypi-release.sh                 (uploads to PyPI)
 #
 # Usage:
 #   ./release.sh
 #
 # Requirements:
-#   - Bash, Git, Gitflow extensions, GitHub CLI, Python, pip
+#   - Bash 4 or higher
+#   - Git, Gitflow extensions, GitHub CLI, Python, pip
 #   - A `VERSION` file present at the repository root (for github-release.sh)
+#   - "git-changelog-command-line" Node.js package for changelog generation
 #   - Environment variables properly set for GitHub and PyPI authentication
-#   - The Node.js package "git-changelog-command-line" installed (for changelog generation)
 #
-# Notes on Environment Variables:
-#   1) GITHUB_TOKEN (or GH CLI Auth):
+# Environment Variables:
+#   1) GITHUB_TOKEN (or GH CLI Auth)
 #      - The GitHub CLI (gh) needs to be authenticated. You can:
 #         * export GITHUB_TOKEN in your environment (gh will pick it up)
 #         * or run `gh auth login` interactively on the machine/agent
 #
-#   2) PYPI_API_TOKEN:
+#   2) PYPI_API_TOKEN
 #      - A PyPI or TestPyPI API token scoped to your project(s).
 #      - This should be stored securely in your CI/CD environment (e.g., Bamboo).
-#      - For usage in `pypi-release.sh`, example:
-#           twine upload --username __token__ --password $PYPI_API_TOKEN
 #
-#   3) ENVIRONMENT (Optional):
+#   3) ENVIRONMENT (Optional)
 #      - If set to 'dev' or 'staging', the generateSDKsFromOpenAPISpecs.sh script
 #        will target those environments. If not defined, the script defaults to
 #        'production'.
-#      - Example usage if needed:
-#           export ENVIRONMENT=dev
 #
 ###############################################################################
 
@@ -54,34 +52,49 @@ echo "=== Release process initiated ==="
 ###############################################################################
 echo "--- Running generateSDKsFromOpenAPISpecs.sh ---"
 
-# If the environment variable ENVIRONMENT is not set, the script defaults to 'production'.
-# Only define ENVIRONMENT if you need dev or staging behavior:
-#   export ENVIRONMENT=dev    (or staging)
-#
-# If ENVIRONMENT is not set, the script uses production by default.
-
+# If ENVIRONMENT is not set, the script defaults to 'production'.
+# e.g. export ENVIRONMENT=dev or staging if needed
 bash generateSDKsFromOpenAPISpecs.sh || error "Failed to generate SDKs."
 
 ###############################################################################
-# 2. Perform GitHub Release
+# 2. Commit the SDK Changes (Including Version)
+###############################################################################
+echo "--- Checking if any changes were made by SDK generation ---"
+
+# Read the version from the VERSION file (if it exists)
+if [ -f "VERSION" ]; then
+  VERSION=$(cat VERSION)
+  echo "Detected version: $VERSION"
+else
+  echo "VERSION file not found; proceeding without version info."
+  VERSION="UNKNOWN"
+fi
+
+# Stage any new/modified files from SDK generation
+git add .
+
+# Check if there are changes to commit
+if git diff --cached --quiet; then
+  echo "No changes from SDK generation to commit."
+  echo "Skipping GitHub release and PyPI release steps."
+  exit 0
+else
+  # Commit the changes with the version in the message
+  git commit -m "chore: update SDKs after generation (version $VERSION)"
+  echo "SDK changes committed."
+fi
+
+###############################################################################
+# 3. Perform GitHub Release
 ###############################################################################
 echo "--- Running github-release.sh ---"
-
-# Before running, ensure:
-#  - GITHUB_TOKEN is set OR `gh auth login` has been done on this machine.
-#  - The Node.js package "git-changelog-command-line" is installed, since
-#    github-release.sh depends on it for changelog generation:
-#      npm install -g git-changelog-command-line
 
 bash github-release.sh || error "GitHub release process failed."
 
 ###############################################################################
-# 3. Perform PyPI Release
+# 4. Perform PyPI Release
 ###############################################################################
 echo "--- Running pypi-release.sh ---"
-
-# Ensure PYPI_API_TOKEN is set in your environment (securely stored in Bamboo).
-# e.g., export PYPI_API_TOKEN=<your_token>
 
 bash pypi-release.sh || error "PyPI release process failed."
 
