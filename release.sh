@@ -54,23 +54,18 @@ echo "=== Release process initiated ==="
 ###############################################################################
 echo "--- Running generateSDKsFromOpenAPISpecs.sh ---"
 
-# Ensure the script is executable
-chmod +x generateSDKsFromOpenAPISpecs.sh
-
 # If the environment variable ENVIRONMENT is not set, the script defaults to 'production'.
 # Only define ENVIRONMENT if you need dev or staging behavior:
 #   export ENVIRONMENT=dev    (or staging)
 #
 # If ENVIRONMENT is not set, the script uses production by default.
 
-./generateSDKsFromOpenAPISpecs.sh || error "Failed to generate SDKs."
+bash generateSDKsFromOpenAPISpecs.sh || error "Failed to generate SDKs."
 
 ###############################################################################
 # 2. Perform GitHub Release
 ###############################################################################
 echo "--- Running github-release.sh ---"
-
-chmod +x github-release.sh
 
 # Before running, ensure:
 #  - GITHUB_TOKEN is set OR `gh auth login` has been done on this machine.
@@ -78,18 +73,16 @@ chmod +x github-release.sh
 #    github-release.sh depends on it for changelog generation:
 #      npm install -g git-changelog-command-line
 
-./github-release.sh || error "GitHub release process failed."
+bash github-release.sh || error "GitHub release process failed."
 
 ###############################################################################
 # 3. Perform PyPI Release
 ###############################################################################
 echo "--- Running pypi-release.sh ---"
 
-chmod +x pypi-release.sh
-
 # Ensure PYPI_API_TOKEN is set in your environment (securely stored in Bamboo).
 # e.g., export PYPI_API_TOKEN=<your_token>
 
-./pypi-release.sh || error "PyPI release process failed."
+bash pypi-release.sh || error "PyPI release process failed."
 
 echo "=== Release process completed successfully ==="
