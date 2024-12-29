@@ -1,0 +1,54 @@
+version: 2
+
+
+plan:
+  project-key: WINK
+  key: PYPI
+  name: PyPI Release Pipeline
+
+stages:
+  - Generate SDKs:
+      jobs:
+        - Generate SDKs
+  - Github release:
+      jobs:
+        - Github release
+  - PyPI release:
+      jobs:
+        - PyPI release
+
+
+Generate SDKs:
+  tasks:
+    - checkout
+    - script:
+        interpreter: /bin/bash
+        scripts:
+          - chmod +x generateSDKsFromOpenAPISpecs.sh
+          - ./generateSDKsFromOpenAPISpecs.sh production
+    - script:
+        interpreter: /bin/bash
+        scripts:
+          - git add .
+          - git commit -m "chore: update SDKs for version $(cat VERSION)" || echo "No changes to commit."
+          - git push origin develop
+
+Github release:
+  tasks:
+    - checkout
+    - script:
+        interpreter: /bin/bash
+        scripts:
+          - chmod +x github-release.sh
+          - ./github-release.sh
+
+PyPI release:
+  tasks:
+    - checkout
+    - script:
+        interpreter: /bin/bash
+        scripts:
+          - chmod +x pypi-release.sh
+          - ./pypi-release.sh
+        environment:
+          PYPI_API_TOKEN: ${bamboo.PYPI_API_TOKEN}
