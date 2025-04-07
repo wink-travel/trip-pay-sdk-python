@@ -24,12 +24,13 @@ Name | Type | Description | Notes
 **status** | **str** | Account status shows if it&#39;s approved | [optional] [default to 'REGISTERED']
 **currency_code** | **str** | Account&#39;s main currency. | 
 **address** | [**Address**](Address.md) |  | 
-**acquirers** | [**List[Acquirer]**](Acquirer.md) |  | [optional] 
+**acquirers** | [**List[Integrator]**](Integrator.md) |  | [optional] 
 **bank_accounts** | [**List[BankAccount]**](BankAccount.md) |  | [optional] 
 **owner_type_identifier** | **str** | This is the tax identification number (TIN) for individuals and entity identification number (EIN) for companies. | [optional] 
 **dob** | **date** | This is the individual&#39;s date of birth. | [optional] 
 **tasks** | [**List[AccountStatusEntry]**](AccountStatusEntry.md) |  | [optional] 
 **preferred_disbursement_type** | **str** | The preferred method which the account holder wishes to be paid. This will play a role if we choose to automate the payout flow. | [optional] [default to 'BANK_TRANSFER']
+**vat_id** | **str** | An optional VAT ID | [optional] 
 
 ## Example
 

@@ -8,7 +8,6 @@ docs/AccountApi.md
 docs/AccountMappingsApi.md
 docs/AccountStatusEntry.md
 docs/AccountStatusResponse.md
-docs/Acquirer.md
 docs/AcquirerCredentials.md
 docs/ActivityStream.md
 docs/ActivityStreamApi.md
@@ -43,8 +42,6 @@ docs/Country.md
 docs/CreateAccountRequest.md
 docs/CreateAgentSaleRequest.md
 docs/CreateApplicationResponse.md
-docs/CreateIssuingCardEphemeralKeyRequest.md
-docs/CreateIssuingCardEphemeralKeyResponse.md
 docs/CreateMappingRequest.md
 docs/CustomMonetaryAmount.md
 docs/DailyRate.md
@@ -58,6 +55,7 @@ docs/GeoName.md
 docs/GroupDescriptor.md
 docs/GuestUser.md
 docs/ImmediateRefundRequest.md
+docs/Integrator.md
 docs/KeyValuePair.md
 docs/ManagingEntity.md
 docs/Mapping.md
@@ -75,7 +73,6 @@ docs/PayableContractSupplier.md
 docs/PayableContractSupplierItem.md
 docs/PayableContractSupplierItemBeneficiary.md
 docs/Payout.md
-docs/PayoutApi.md
 docs/PayoutFee.md
 docs/PendingRefund.md
 docs/Personal.md
@@ -122,6 +119,7 @@ setup.cfg
 setup.py
 test-requirements.txt
 test/__init__.py
+test/test_integrator.py
 tox.ini
 trip_pay_payment/__init__.py
 trip_pay_payment/api/__init__.py
@@ -134,7 +132,6 @@ trip_pay_payment/api/application_api.py
 trip_pay_payment/api/contract_api.py
 trip_pay_payment/api/external_event_api.py
 trip_pay_payment/api/mapping_api.py
-trip_pay_payment/api/payout_api.py
 trip_pay_payment/api/ping_api.py
 trip_pay_payment/api/webhook_api.py
 trip_pay_payment/api_client.py
@@ -145,7 +142,6 @@ trip_pay_payment/models/__init__.py
 trip_pay_payment/models/account.py
 trip_pay_payment/models/account_status_entry.py
 trip_pay_payment/models/account_status_response.py
-trip_pay_payment/models/acquirer.py
 trip_pay_payment/models/acquirer_credentials.py
 trip_pay_payment/models/activity_stream.py
 trip_pay_payment/models/activity_stream_user.py
@@ -175,8 +171,6 @@ trip_pay_payment/models/country.py
 trip_pay_payment/models/create_account_request.py
 trip_pay_payment/models/create_agent_sale_request.py
 trip_pay_payment/models/create_application_response.py
-trip_pay_payment/models/create_issuing_card_ephemeral_key_request.py
-trip_pay_payment/models/create_issuing_card_ephemeral_key_response.py
 trip_pay_payment/models/create_mapping_request.py
 trip_pay_payment/models/custom_monetary_amount.py
 trip_pay_payment/models/daily_rate.py
@@ -189,6 +183,7 @@ trip_pay_payment/models/geo_name.py
 trip_pay_payment/models/group_descriptor.py
 trip_pay_payment/models/guest_user.py
 trip_pay_payment/models/immediate_refund_request.py
+trip_pay_payment/models/integrator.py
 trip_pay_payment/models/key_value_pair.py
 trip_pay_payment/models/managing_entity.py
 trip_pay_payment/models/mapping.py
