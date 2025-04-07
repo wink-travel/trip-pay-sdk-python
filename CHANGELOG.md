@@ -2,6 +2,34 @@
 
 Changelog of trip-pay-sdk-python.
 
+## v0.0.3 (2025-04-07)
+
+### Other changes
+
+**Merge branch 'release/0.0.3'**
+
+
+[9885b](https://github.com/wink-travel/trip-pay-sdk-python/commit/9885be46b07dd47) bjornharvold *2025-04-07 07:57:58*
+
+**Merge pull request #2 from wink-travel/develop**
+
+* chore: fix openapi-generator command 
+
+[7d689](https://github.com/wink-travel/trip-pay-sdk-python/commit/7d689d515f82043) flowmode *2025-04-07 07:51:42*
+
+**Merge pull request #1 from wink-travel/develop**
+
+* chore: update generation and release flow 
+
+[3515b](https://github.com/wink-travel/trip-pay-sdk-python/commit/3515be9de678e10) flowmode *2025-04-07 07:45:22*
+
+**Merge tag '0.0.2' into develop**
+
+* chore: release v0.0.2 0.0.2 
+
+[27ea5](https://github.com/wink-travel/trip-pay-sdk-python/commit/27ea5eee0f5f3cd) vessaas *2024-12-29 14:51:13*
+
+
 ## v0.0.2 (2024-12-29)
 
 ### Other changes
