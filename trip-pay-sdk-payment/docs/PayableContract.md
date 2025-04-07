@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **display_currency** | **str** | The desired quote | [default to 'USD']
 **redirect_url** | **str** | Where to redirect to after booking [in-]complete | 
 **contract** | [**PricedSupplierContractWithAcquirer**](PricedSupplierContractWithAcquirer.md) |  | 
-**acquirer_list** | [**List[Acquirer]**](Acquirer.md) |  | 
+**acquirer_list** | [**List[Integrator]**](Integrator.md) |  | 
 **metadata** | **Dict[str, str]** | Depending on the acquirer, we put in required data for creating the payment. | [optional] 
 **instant** | **datetime** | Date to attach TTL. Self-deletes after 1 hour of unuse. | 
 

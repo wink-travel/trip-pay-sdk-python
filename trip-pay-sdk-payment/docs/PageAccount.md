@@ -11,10 +11,10 @@ Name | Type | Description | Notes
 **content** | [**List[Account]**](Account.md) |  | [optional] 
 **number** | **int** |  | [optional] 
 **sort** | [**List[SortObject]**](SortObject.md) |  | [optional] 
-**first** | **bool** |  | [optional] 
-**last** | **bool** |  | [optional] 
 **number_of_elements** | **int** |  | [optional] 
 **pageable** | [**PageableObject**](PageableObject.md) |  | [optional] 
+**first** | **bool** |  | [optional] 
+**last** | **bool** |  | [optional] 
 **empty** | **bool** |  | [optional] 
 
 ## Example

@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **owner_type_identifier** | **str** | Either the TIN (individual) or the EIN (company) number of the individual. | [optional] 
 **dob** | **date** | Date of birth in the case of an individual. | [optional] 
 **disbursement_type** | **str** | The method which the account holder whishes to be paid. | [optional] 
+**vat_id** | **str** | An optional VAT ID | [optional] 
 
 ## Example
 

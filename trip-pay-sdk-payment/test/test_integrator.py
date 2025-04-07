@@ -13,80 +13,65 @@
 """  # noqa: E501
 
 
-from __future__ import annotations
-import pprint
-import re  # noqa: F401
-import json
+import unittest
 
-from pydantic import BaseModel, ConfigDict
-from typing import Any, ClassVar, Dict, List
-from trip_pay_payment.models.payable_contract_request import PayableContractRequest
-from typing import Optional, Set
-from typing_extensions import Self
+from trip_pay_payment.models.integrator import Integrator
 
-class CreateAgentSaleRequest(BaseModel):
-    """
-    CreateAgentSaleRequest
-    """ # noqa: E501
-    contract: PayableContractRequest
-    __properties: ClassVar[List[str]] = ["contract"]
+class TestIntegrator(unittest.TestCase):
+    """Integrator unit test stubs"""
 
-    model_config = ConfigDict(
-        populate_by_name=True,
-        validate_assignment=True,
-        protected_namespaces=(),
-    )
+    def setUp(self):
+        pass
 
+    def tearDown(self):
+        pass
 
-    def to_str(self) -> str:
-        """Returns the string representation of the model using alias"""
-        return pprint.pformat(self.model_dump(by_alias=True))
-
-    def to_json(self) -> str:
-        """Returns the JSON representation of the model using alias"""
-        # TODO: pydantic v2: use .model_dump_json(by_alias=True, exclude_unset=True) instead
-        return json.dumps(self.to_dict())
-
-    @classmethod
-    def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of CreateAgentSaleRequest from a JSON string"""
-        return cls.from_dict(json.loads(json_str))
-
-    def to_dict(self) -> Dict[str, Any]:
-        """Return the dictionary representation of the model using alias.
-
-        This has the following differences from calling pydantic's
-        `self.model_dump(by_alias=True)`:
-
-        * `None` is only added to the output dict for nullable fields that
-          were set at model initialization. Other fields with value `None`
-          are ignored.
+    def make_instance(self, include_optional) -> Integrator:
+        """Test Integrator
+            include_optional is a boolean, when False only required
+            params are included, when True both required and
+            optional params are included """
+        # uncomment below to create an instance of `Integrator`
         """
-        excluded_fields: Set[str] = set([
-        ])
-
-        _dict = self.model_dump(
-            by_alias=True,
-            exclude=excluded_fields,
-            exclude_none=True,
+        model = Integrator()
+        if include_optional:
+            return Integrator(
+                id = 'integrator-1',
+                name = 'Integrator 1',
+                priority = 56,
+                vendor = 'STRIPE',
+                type = 'CREDIT_CARD',
+                currency_code = 'GBP',
+                credentials = [
+                    trip_pay_payment.models.acquirer_credentials.AcquirerCredentials(
+                        type = 'TOKEN', 
+                        key1 = 'token-1', 
+                        key2 = 'token-2', )
+                    ],
+                webhook_secret = '',
+                public_token = ''
+            )
+        else:
+            return Integrator(
+                id = 'integrator-1',
+                name = 'Integrator 1',
+                priority = 56,
+                vendor = 'STRIPE',
+                type = 'CREDIT_CARD',
+                currency_code = 'GBP',
+                credentials = [
+                    trip_pay_payment.models.acquirer_credentials.AcquirerCredentials(
+                        type = 'TOKEN', 
+                        key1 = 'token-1', 
+                        key2 = 'token-2', )
+                    ],
         )
-        # override the default output from pydantic by calling `to_dict()` of contract
-        if self.contract:
-            _dict['contract'] = self.contract.to_dict()
-        return _dict
+        """
 
-    @classmethod
-    def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of CreateAgentSaleRequest from a dict"""
-        if obj is None:
-            return None
+    def testIntegrator(self):
+        """Test Integrator"""
+        # inst_req_only = self.make_instance(include_optional=False)
+        # inst_req_and_optional = self.make_instance(include_optional=True)
 
-        if not isinstance(obj, dict):
-            return cls.model_validate(obj)
-
-        _obj = cls.model_validate({
-            "contract": PayableContractRequest.from_dict(obj["contract"]) if obj.get("contract") is not None else None
-        })
-        return _obj
-
-
+if __name__ == '__main__':
+    unittest.main()

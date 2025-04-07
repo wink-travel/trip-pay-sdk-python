@@ -18,29 +18,26 @@ import pprint
 import re  # noqa: F401
 import json
 
-from datetime import datetime
-from pydantic import BaseModel, ConfigDict, Field, StrictStr, field_validator
+from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
-from trip_pay_payment.models.fee import Fee
+from trip_pay_payment.models.acquirer_credentials import AcquirerCredentials
 from typing import Optional, Set
 from typing_extensions import Self
 
-class BookingContractPaymentDetails(BaseModel):
+class Integrator(BaseModel):
     """
-    Details of the payment. Payment details will be empty if account type is AGENT
+    Payment method with the details describing how to make a reactive happen
     """ # noqa: E501
-    acquirer_identifier: StrictStr = Field(description="Unique acquiring identifier. Blank for agent payment", alias="acquirerIdentifier")
+    id: StrictStr = Field(description="Unique identifier.")
+    name: StrictStr = Field(description="Integrator.")
+    priority: StrictInt = Field(description="Determines how vendors are displayed in a list")
     vendor: StrictStr = Field(description="Name of acquiring vendor")
-    transaction_identifier: StrictStr = Field(description="Unique transaction id from the vendor. Agent adds their transaction identifier.", alias="transactionIdentifier")
-    customer_identifier: StrictStr = Field(description="Unique customer id from the vendor. Agent adds their own customer identifier.", alias="customerIdentifier")
-    charge_identifier: StrictStr = Field(description="Unique charge id from the vendor..", alias="chargeIdentifier")
-    status: StrictStr = Field(description="Unique transaction id from the vendor upon a successful sale. Agent adds their transaction identifier.")
-    agent_invoiced_date: Optional[datetime] = Field(default=None, description="The date/time the invoice was generated", alias="agentInvoicedDate")
-    agent_invoice_identifier: Optional[StrictStr] = Field(default=None, description="The specific invoice this booking was registered on", alias="agentInvoiceIdentifier")
-    redirect_url: Optional[StrictStr] = Field(default=None, description="Where to redirect to after payment [in-]complete", alias="redirectUrl")
-    fees: Optional[List[Fee]] = None
-    vendor_specific: Dict[str, StrictStr] = Field(description="Vendor specific values that are returned in a successful response", alias="vendorSpecific")
-    __properties: ClassVar[List[str]] = ["acquirerIdentifier", "vendor", "transactionIdentifier", "customerIdentifier", "chargeIdentifier", "status", "agentInvoicedDate", "agentInvoiceIdentifier", "redirectUrl", "fees", "vendorSpecific"]
+    type: StrictStr = Field(description="Technology taking the charge")
+    currency_code: StrictStr = Field(description="Currency in coverage region.", alias="currencyCode")
+    credentials: List[AcquirerCredentials]
+    webhook_secret: Optional[StrictStr] = Field(default=None, alias="webhookSecret")
+    public_token: Optional[StrictStr] = Field(default=None, alias="publicToken")
+    __properties: ClassVar[List[str]] = ["id", "name", "priority", "vendor", "type", "currencyCode", "credentials", "webhookSecret", "publicToken"]
 
     @field_validator('vendor')
     def vendor_validate_enum(cls, value):
@@ -49,11 +46,11 @@ class BookingContractPaymentDetails(BaseModel):
             raise ValueError("must be one of enum values ('STRIPE', 'AGENT', 'NMI', 'WISE')")
         return value
 
-    @field_validator('status')
-    def status_validate_enum(cls, value):
+    @field_validator('type')
+    def type_validate_enum(cls, value):
         """Validates the enum"""
-        if value not in set(['INITIALIZED', 'PROCESSING', 'SUCCEEDED', 'FAILED']):
-            raise ValueError("must be one of enum values ('INITIALIZED', 'PROCESSING', 'SUCCEEDED', 'FAILED')")
+        if value not in set(['CREDIT_CARD', 'BANK_TRANSFER', 'PAY_PAL', 'CRYPTO', 'AGENT', 'CASH']):
+            raise ValueError("must be one of enum values ('CREDIT_CARD', 'BANK_TRANSFER', 'PAY_PAL', 'CRYPTO', 'AGENT', 'CASH')")
         return value
 
     model_config = ConfigDict(
@@ -74,7 +71,7 @@ class BookingContractPaymentDetails(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of BookingContractPaymentDetails from a JSON string"""
+        """Create an instance of Integrator from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -95,18 +92,18 @@ class BookingContractPaymentDetails(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of each item in fees (list)
+        # override the default output from pydantic by calling `to_dict()` of each item in credentials (list)
         _items = []
-        if self.fees:
-            for _item_fees in self.fees:
-                if _item_fees:
-                    _items.append(_item_fees.to_dict())
-            _dict['fees'] = _items
+        if self.credentials:
+            for _item_credentials in self.credentials:
+                if _item_credentials:
+                    _items.append(_item_credentials.to_dict())
+            _dict['credentials'] = _items
         return _dict
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of BookingContractPaymentDetails from a dict"""
+        """Create an instance of Integrator from a dict"""
         if obj is None:
             return None
 
@@ -114,17 +111,15 @@ class BookingContractPaymentDetails(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "acquirerIdentifier": obj.get("acquirerIdentifier"),
+            "id": obj.get("id"),
+            "name": obj.get("name"),
+            "priority": obj.get("priority"),
             "vendor": obj.get("vendor"),
-            "transactionIdentifier": obj.get("transactionIdentifier"),
-            "customerIdentifier": obj.get("customerIdentifier"),
-            "chargeIdentifier": obj.get("chargeIdentifier"),
-            "status": obj.get("status"),
-            "agentInvoicedDate": obj.get("agentInvoicedDate"),
-            "agentInvoiceIdentifier": obj.get("agentInvoiceIdentifier"),
-            "redirectUrl": obj.get("redirectUrl"),
-            "fees": [Fee.from_dict(_item) for _item in obj["fees"]] if obj.get("fees") is not None else None,
-            "vendorSpecific": obj.get("vendorSpecific")
+            "type": obj.get("type"),
+            "currencyCode": obj.get("currencyCode"),
+            "credentials": [AcquirerCredentials.from_dict(_item) for _item in obj["credentials"]] if obj.get("credentials") is not None else None,
+            "webhookSecret": obj.get("webhookSecret"),
+            "publicToken": obj.get("publicToken")
         })
         return _obj
 
