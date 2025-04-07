@@ -87,7 +87,7 @@ generate_sdk() {
   additional_props="projectName=$project_name,packageName=$package_name,packageVersion=$new_version,packageUrl=$package_url"
   
   # Generate the SDK
-  openapi-generator generate \
+  $GENERATOR_CMD generate \
     -g python \
     --artifact-id $package_name \
     --artifact-version $new_version \
