@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "trip_pay_payment"
-version = "0.0.3"
+version = "0.0.4"
 description = "Wink Payment API"
 authors = ["Bjorn Harvold <bjorn@wink.travel>"]
 license = "NoLicense"
