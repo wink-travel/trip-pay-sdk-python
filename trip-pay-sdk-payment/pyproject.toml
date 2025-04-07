@@ -1,18 +1,27 @@
+[project]
+name= "trip_pay_payment"
+version= "0.0.5"
+description= "Wink Payment API"
+authors = [{ name = "Bjorn Harvold", email = "bjorn@wink.travel" }]
+license = { file = "LICENSE" }
+readme = { file = "README.md", content-type = "text/markdown" }
+keywords = ["OpenAPI", "OpenAPI-Generator", "Wink Payment API"]
+
 [tool.poetry]
 name = "trip_pay_payment"
-version = "0.0.4"
+version = "0.0.5"
 description = "Wink Payment API"
 authors = ["Bjorn Harvold <bjorn@wink.travel>"]
-license = "NoLicense"
+license = "Apache License Version 2.0"
 readme = "README.md"
 repository = "https://github.com/wink-travel/trip-pay-sdk-python"
 keywords = ["OpenAPI", "OpenAPI-Generator", "Wink Payment API"]
 include = ["trip_pay_payment/py.typed"]
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.9"
 
-urllib3 = ">= 1.25.3, < 3.0.0"
+urllib3 = ">= 2.1.0, < 3.0.0"
 python-dateutil = ">= 2.8.2"
 pydantic = ">= 2"
 typing-extensions = ">= 4.7.1"
@@ -24,7 +33,6 @@ tox = ">= 3.9.0"
 flake8 = ">= 4.0.0"
 types-python-dateutil = ">= 2.8.19.14"
 mypy = ">= 1.5"
-
 
 [build-system]
 requires = ["setuptools"]
