@@ -55,6 +55,18 @@ echo "New version: $new_version"
 # Add the new version to VERSION file.
 update_version_file $new_version
 
+# Determine the openapi-generator command based on what is installed
+get_generator_cmd() {
+  if command -v openapi-generator >/dev/null 2>&1; then
+    echo "openapi-generator"
+  elif command -v openapi-generator-cli >/dev/null 2>&1; then
+    echo "openapi-generator-cli"
+  else
+    echo "Error: Neither 'openapi-generator' nor 'openapi-generator-cli' is installed." >&2
+    exit 1
+  fi
+}
+
 # Function to generate SDK from OpenAPI spec
 generate_sdk() {
   local api_url="$1"
@@ -62,6 +74,8 @@ generate_sdk() {
   local project_name="$3"
   local package_url="$4"
 
+  GENERATOR_CMD=$(get_generator_cmd)
+  echo "Using generator command: $GENERATOR_CMD"
   echo "Generating $package_name..."
 
   # Health check
