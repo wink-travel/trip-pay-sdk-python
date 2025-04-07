@@ -119,7 +119,6 @@ setup.cfg
 setup.py
 test-requirements.txt
 test/__init__.py
-test/test_integrator.py
 tox.ini
 trip_pay_payment/__init__.py
 trip_pay_payment/api/__init__.py
