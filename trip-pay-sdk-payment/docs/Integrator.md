@@ -1,12 +1,12 @@
 # Integrator
 
-Payment method with the details describing how to make a reactive happen
+Payment method with the details describing how to make a payment happen
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **str** | Unique identifier. | 
+**identifier** | **str** | Unique identifier. | 
 **name** | **str** | Integrator. | 
 **priority** | **int** | Determines how vendors are displayed in a list | 
 **vendor** | **str** | Name of acquiring vendor | 

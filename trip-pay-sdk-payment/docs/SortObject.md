@@ -5,11 +5,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**direction** | **str** |  | [optional] 
-**null_handling** | **str** |  | [optional] 
-**ascending** | **bool** |  | [optional] 
-**var_property** | **str** |  | [optional] 
-**ignore_case** | **bool** |  | [optional] 
+**empty** | **bool** |  | [optional] 
+**sorted** | **bool** |  | [optional] 
+**unsorted** | **bool** |  | [optional] 
 
 ## Example
 

@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **offset** | **int** |  | [optional] 
-**sort** | [**List[SortObject]**](SortObject.md) |  | [optional] 
+**sort** | [**SortObject**](SortObject.md) |  | [optional] 
 **paged** | **bool** |  | [optional] 
 **page_number** | **int** |  | [optional] 
 **page_size** | **int** |  | [optional] 
