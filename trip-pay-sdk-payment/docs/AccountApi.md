@@ -19,7 +19,7 @@ Method | HTTP request | Description
 [**load_external_account**](AccountApi.md#load_external_account) | **GET** /api/account/external/{externalAccountIdentifier} | Show Account for External
 [**remove_account_bank_account**](AccountApi.md#remove_account_bank_account) | **DELETE** /api/account/{id}/bank-account/{bankAccountId} | Remove Bank Account
 [**remove_external_account_bank_account**](AccountApi.md#remove_external_account_bank_account) | **DELETE** /api/account/external/{id}/bank-account/{bankAccountId} | Remove Bank Account for External
-[**search_account_by_name**](AccountApi.md#search_account_by_name) | **GET** /api/account/search/{name} | Search Accounts by Name
+[**search_account_by_name**](AccountApi.md#search_account_by_name) | **GET** /api/account/search | Search Accounts by Name
 [**show_accounts_by_owner**](AccountApi.md#show_accounts_by_owner) | **GET** /api/account/owner/list | Show Accounts by Owner
 [**update_account**](AccountApi.md#update_account) | **PATCH** /api/account/{id} | Update Account
 [**update_external_account**](AccountApi.md#update_external_account) | **PATCH** /api/account/external/{id} | Update External Account

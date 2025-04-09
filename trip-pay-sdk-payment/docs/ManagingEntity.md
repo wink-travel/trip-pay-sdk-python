@@ -6,9 +6,10 @@ Name of the application.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**value** | **str** | The value that should be persisted. | 
-**label** | **str** | Text representation of the value. | 
+**identifier** | **str** | The value that should be persisted. | 
+**name** | **str** | Text representation of the value. | 
 **type** | **str** | Type of entity. | 
+**sub_type** | **str** | This is for Wink entities only. Does not apply to TripPay. | 
 
 ## Example
 

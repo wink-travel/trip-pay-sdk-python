@@ -6,10 +6,11 @@ Object that holds before and after values of a particular amount after refund ha
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**supplier_currency** | **str** |  | [optional] 
-**capture_currency** | **str** |  | [optional] 
-**supplier_amount** | **float** |  | [optional] 
-**capture_amount** | **float** |  | [optional] 
+**account_identifier** | **str** |  | 
+**supplier_currency** | **str** |  | 
+**capture_currency** | **str** |  | 
+**supplier_amount** | **float** |  | 
+**capture_amount** | **float** |  | 
 
 ## Example
 
