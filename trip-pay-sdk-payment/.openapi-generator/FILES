@@ -125,12 +125,6 @@ setup.cfg
 setup.py
 test-requirements.txt
 test/__init__.py
-test/test_count_response.py
-test/test_notification.py
-test/test_notification_api.py
-test/test_notification_view.py
-test/test_send_notification.py
-test/test_send_notification_controller_api.py
 tox.ini
 trip_pay_payment/__init__.py
 trip_pay_payment/api/__init__.py
