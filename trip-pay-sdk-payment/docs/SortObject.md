@@ -5,9 +5,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**sorted** | **bool** |  | [optional] 
 **empty** | **bool** |  | [optional] 
 **unsorted** | **bool** |  | [optional] 
-**sorted** | **bool** |  | [optional] 
 
 ## Example
 
