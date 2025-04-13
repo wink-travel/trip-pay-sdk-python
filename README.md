@@ -12,7 +12,7 @@ Python 3.8+
 
 Download libraries from PyPi.
 
-### Payment
+## Payment
 
 [API documentation](trip-pay-sdk-payment/README.md)
 
@@ -30,17 +30,15 @@ The Payment API exposes endpoints for affiliates and hotels to track bookings, a
 - PingApi: Easy way to check if you are connected and authenticated with the Wink platform.
 - WebhookApi: Use the Webhook API to create webhooks to interface with the TripPay API.
 
-### Payment Acquiring
+#### How to install
 
-[API documentation](trip-pay-sdk-payment-acquiring/README.md)
+[PyPi URL](https://pypi.org/project/trip-pay-sdk-payment)
 
-The Payment Acquiring API exposes endpoints for affiliates to acquire a payment via our payment methods in their own applications. These are the same features we leverage in our payment Web Component.
+You can install the package from PyPi using:
+```sh
+pip install trip_pay_sdk_payment
+```
 
-#### API's
-
-- AffiliateApi: Retrieve affiliate facilitator data with the Affiliate API.
-- ContractApi: Validate, price and execute a booking contract with the Contract API.
-- StripeApi: Create an SCA / PSD2 compliant sale request with Stripe's payment gateway with the Stripe API.
 
 
 ## Configuration
