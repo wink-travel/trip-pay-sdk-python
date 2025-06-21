@@ -57,7 +57,7 @@ docs/Mapping.md
 docs/MappingApi.md
 docs/MultiBookingContractResponse.md
 docs/Notification.md
-docs/NotificationLightweightApi.md
+docs/NotificationApi.md
 docs/PageAccount.md
 docs/PageBookingContract.md
 docs/PageMapping.md
@@ -110,13 +110,6 @@ setup.cfg
 setup.py
 test-requirements.txt
 test/__init__.py
-test/test_country_lightweight.py
-test/test_geo_name_lightweight.py
-test/test_notification_lightweight_api.py
-test/test_profile_lightweight.py
-test/test_quote_lightweight.py
-test/test_sub_country_lightweight.py
-test/test_sub_sub_country_lightweight.py
 tox.ini
 trip_pay_payment/__init__.py
 trip_pay_payment/api/__init__.py
@@ -128,7 +121,7 @@ trip_pay_payment/api/agent_api.py
 trip_pay_payment/api/application_api.py
 trip_pay_payment/api/contract_api.py
 trip_pay_payment/api/mapping_api.py
-trip_pay_payment/api/notification_lightweight_api.py
+trip_pay_payment/api/notification_api.py
 trip_pay_payment/api/ping_api.py
 trip_pay_payment/api/send_notification_controller_api.py
 trip_pay_payment/api/webhook_api.py

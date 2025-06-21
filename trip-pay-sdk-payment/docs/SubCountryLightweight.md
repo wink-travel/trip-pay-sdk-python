@@ -1,13 +1,13 @@
 # SubCountryLightweight
 
-CountryLightweight subdivision such as a state or province
+Country subdivision such as a state or province
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **code** | **str** | Code | [optional] 
-**country_code** | **str** | CountryLightweight code | [optional] 
+**country_code** | **str** | Country code | [optional] 
 **sub_country_code** | **str** | Sub-country code | [optional] 
 **name** | **str** | Sub-country name | [optional] 
 **ascii_name** | **str** | Sub-country ascii name | [optional] 

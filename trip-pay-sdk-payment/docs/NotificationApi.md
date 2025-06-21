@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **remove_notification**
-> NotificationView remove_notification(account_identifier, message_identifier, wink_version=wink_version, accept=accept)
+> Notification remove_notification(account_identifier, message_identifier, wink_version=wink_version, accept=accept)
 
 Delete Notification
 
@@ -23,7 +23,7 @@ Remove announcement specified by its identifier.
 
 ```python
 import trip_pay_payment
-from trip_pay_payment.models.notification_view import NotificationView
+from trip_pay_payment.models.notification import Notification
 from trip_pay_payment.rest import ApiException
 from pprint import pprint
 
@@ -72,7 +72,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**NotificationView**](NotificationView.md)
+[**Notification**](Notification.md)
 
 ### Authorization
 
@@ -92,7 +92,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **show_notification**
-> NotificationView show_notification(account_identifier, message_identifier, wink_version=wink_version, accept=accept)
+> Notification show_notification(account_identifier, message_identifier, wink_version=wink_version, accept=accept)
 
 Show Notification
 
@@ -104,7 +104,7 @@ Retrieve messages for a specific company by ID
 
 ```python
 import trip_pay_payment
-from trip_pay_payment.models.notification_view import NotificationView
+from trip_pay_payment.models.notification import Notification
 from trip_pay_payment.rest import ApiException
 from pprint import pprint
 
@@ -153,7 +153,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**NotificationView**](NotificationView.md)
+[**Notification**](Notification.md)
 
 ### Authorization
 
@@ -173,7 +173,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **show_notifications**
-> List[NotificationView] show_notifications(account_identifier, wink_version=wink_version, accept=accept)
+> List[Notification] show_notifications(account_identifier, wink_version=wink_version, accept=accept)
 
 Show Notifications
 
@@ -185,7 +185,7 @@ Retrieve all the messages for this account.
 
 ```python
 import trip_pay_payment
-from trip_pay_payment.models.notification_view import NotificationView
+from trip_pay_payment.models.notification import Notification
 from trip_pay_payment.rest import ApiException
 from pprint import pprint
 
@@ -232,7 +232,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List[NotificationView]**](NotificationView.md)
+[**List[Notification]**](Notification.md)
 
 ### Authorization
 

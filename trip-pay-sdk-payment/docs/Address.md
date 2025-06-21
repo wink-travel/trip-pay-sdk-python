@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **county** | **str** | County | [optional] 
 **city** | [**GeoNameLightweight**](GeoNameLightweight.md) | City geo name object | 
 **valid** | **bool** | Whether this address is considered valid by the system or not | [optional] [readonly] 
-**full_address** | **str** | Address 1, Address 2, City, State, Postal / Zip code, CountryLightweight | [optional] [readonly] 
+**full_address** | **str** | Address 1, Address 2, City, State, Postal / Zip code, Country | [optional] [readonly] 
 
 ## Example
 

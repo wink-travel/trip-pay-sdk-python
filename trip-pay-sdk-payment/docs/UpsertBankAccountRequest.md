@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**country_code** | **str** | CountryLightweight of bank account | 
+**country_code** | **str** | Country of bank account | 
 **currency_code** | **str** | Currency of bank account | 
 **account_holder_name** | **str** | Bank account holder name | 
 **swift_code** | **str** | Bank SWIFT code. Unique code identifier the bank and branch of the bank account. | [optional] 

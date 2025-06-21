@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **city** | **str** | City | [optional] 
 **state** | **str** | State | [optional] 
 **postal_code** | **str** | Postal code | [optional] 
-**country** | **str** | CountryLightweight | [optional] 
+**country** | **str** | Country | [optional] 
 **preferred_currency** | **str** | Type of funds preferred for reviewing monetary values, in ISO 4217 codes | [optional] 
 **language** | **str** | The primary language of the customer | [optional] 
 **contact_person** | **List[object]** |  | [optional] 
