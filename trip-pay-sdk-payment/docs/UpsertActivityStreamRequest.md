@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **comment** | **str** | Optional comment. For when the activity was created manually by a user. If i18nKey is not populated, comment is required. | [optional] 
 **i18n_key** | **str** | Optional localized key. Key will be used to generate text on the front-end. If comment is not populated, i18n is required. | 
 **attachment_id** | **str** | Optional attachment. For when we allow users to upload documents to the activity via Cloudinary. | [optional] 
-**user** | [**ActivityStreamUser**](ActivityStreamUser.md) |  | [optional] 
+**user** | [**ActivityStreamUser**](ActivityStreamUser.md) | Optional user. Attached when an authenticated user is available in the context of the activity. | [optional] 
 
 ## Example
 

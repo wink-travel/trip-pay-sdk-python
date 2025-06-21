@@ -5,8 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**page** | [**PageBookingContract**](PageBookingContract.md) |  | 
-**total_funds** | [**TotalAggregateFunds**](TotalAggregateFunds.md) |  | 
+**page** | [**PageBookingContract**](PageBookingContract.md) | Page of booking contracts | 
+**total_funds** | [**TotalAggregateFunds**](TotalAggregateFunds.md) | Aggregate funds for all booking contracts | 
 
 ## Example
 

@@ -1,6 +1,5 @@
 # CompositeFilterDescriptor
 
-Descriptors used for filtering result set
 
 ## Properties
 

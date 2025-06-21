@@ -1,6 +1,5 @@
 # TotalAggregateFunds
 
-Aggregate funds for all booking contracts
 
 ## Properties
 

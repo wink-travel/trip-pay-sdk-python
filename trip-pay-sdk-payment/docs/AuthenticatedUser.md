@@ -1,6 +1,5 @@
 # AuthenticatedUser
 
-The user making the booking
 
 ## Properties
 

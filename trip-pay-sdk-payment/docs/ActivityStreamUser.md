@@ -1,6 +1,5 @@
 # ActivityStreamUser
 
-Optional user. Attached when an authenticated user is available in the context of the activity.
 
 ## Properties
 

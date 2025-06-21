@@ -14,11 +14,11 @@ Name | Type | Description | Notes
 **account_email** | **str** | Account email is where we will send KYC documents and other account specific mailings | 
 **account_phone_number** | **str** | Account phone number is mostly used for KYC purchases | [optional] 
 **description** | **str** | Short company / person description. | 
-**url** | **str** | Company website. If private person with no personal website, link to main social network account. | 
+**url** | **str** | AffiliateAccountLightweight website. If private person with no personal website, link to main social network account. | 
 **currency_code** | **str** | Account&#39;s main currency. | 
-**address** | [**UpsertCityOnlyAddressRequest**](UpsertCityOnlyAddressRequest.md) |  | [optional] 
-**acquirers** | [**List[Integrator]**](Integrator.md) |  | [optional] 
-**bank_accounts** | [**List[UpsertBankAccountRequest]**](UpsertBankAccountRequest.md) |  | [optional] 
+**address** | [**UpsertCityOnlyAddressRequest**](UpsertCityOnlyAddressRequest.md) | Account address. Usually the business address | [optional] 
+**acquirers** | **List[object]** |  | [optional] 
+**bank_accounts** | **List[object]** |  | [optional] 
 **owner_type_identifier** | **str** | This is the tax identification number (TIN) for individuals and entity identification number (EIN) for companies. | [optional] 
 **dob** | **date** | This is the individual&#39;s date of birth. | [optional] 
 **disbursement_type** | **str** | The method which the account holder wishes to be paid. | [optional] 

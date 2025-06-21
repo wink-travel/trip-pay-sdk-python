@@ -14,8 +14,8 @@ Method | HTTP request | Description
 [**load_account**](AccountApi.md#load_account) | **GET** /api/account/{id} | Show Account
 [**load_account_by_name**](AccountApi.md#load_account_by_name) | **GET** /api/account/name/{name} | Show Accounts by Name
 [**load_account_by_name_like**](AccountApi.md#load_account_by_name_like) | **GET** /api/account/name | Show Accounts by Name like
-[**load_account_grid_for_authenticated_user**](AccountApi.md#load_account_grid_for_authenticated_user) | **POST** /api/account/grid | Show Account Grid for User
-[**load_accounts_for_authenticated_user**](AccountApi.md#load_accounts_for_authenticated_user) | **GET** /api/account/list | Show Account for User
+[**load_account_grid_for_authenticated_user**](AccountApi.md#load_account_grid_for_authenticated_user) | **POST** /api/account/grid | Show Account Grid for UserLightweight
+[**load_accounts_for_authenticated_user**](AccountApi.md#load_accounts_for_authenticated_user) | **GET** /api/account/list | Show Account for UserLightweight
 [**load_external_account**](AccountApi.md#load_external_account) | **GET** /api/account/external/{externalAccountIdentifier} | Show Account for External
 [**remove_account_bank_account**](AccountApi.md#remove_account_bank_account) | **DELETE** /api/account/{id}/bank-account/{bankAccountId} | Remove Bank Account
 [**remove_external_account_bank_account**](AccountApi.md#remove_external_account_bank_account) | **DELETE** /api/account/external/{id}/bank-account/{bankAccountId} | Remove Bank Account for External
@@ -827,7 +827,7 @@ Name | Type | Description  | Notes
 # **load_account_grid_for_authenticated_user**
 > PageAccount load_account_grid_for_authenticated_user(state, wink_version=wink_version)
 
-Show Account Grid for User
+Show Account Grid for UserLightweight
 
 Load account grid for authenticated user
 
@@ -863,7 +863,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
     wink_version = 'wink_version_example' # str |  (optional)
 
     try:
-        # Show Account Grid for User
+        # Show Account Grid for UserLightweight
         api_response = api_instance.load_account_grid_for_authenticated_user(state, wink_version=wink_version)
         print("The response of AccountApi->load_account_grid_for_authenticated_user:\n")
         pprint(api_response)
@@ -905,7 +905,7 @@ Name | Type | Description  | Notes
 # **load_accounts_for_authenticated_user**
 > List[Account] load_accounts_for_authenticated_user(wink_version=wink_version, accept=accept)
 
-Show Account for User
+Show Account for UserLightweight
 
 Load account details for authenticated user
 
@@ -940,7 +940,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
     accept = 'accept_example' # str |  (optional)
 
     try:
-        # Show Account for User
+        # Show Account for UserLightweight
         api_response = api_instance.load_accounts_for_authenticated_user(wink_version=wink_version, accept=accept)
         print("The response of AccountApi->load_accounts_for_authenticated_user:\n")
         pprint(api_response)

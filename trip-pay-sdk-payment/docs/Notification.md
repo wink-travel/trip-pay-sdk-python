@@ -5,7 +5,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**identifier** | **str** | Notification identifier | 
+**id** | **str** | Document UUID | [optional] 
+**created_date** | **datetime** | Datetime this record was first created | [optional] 
+**last_update** | **datetime** | Datetime this record was last updated | [optional] 
+**version** | **int** | Version property that shows how many times this document has been persisted. Document will not persist if the version property is less than current version property in the system. Result in an optimistic locking exception. | [optional] 
 **owner_identifier** | **str** | Owner identifier | 
 **priority** | **str** | Importance of message | 
 **type** | **str** | Message type | 
@@ -15,7 +18,7 @@ Name | Type | Description | Notes
 **subject** | **str** | Subject of message | 
 **body** | **str** | Subject of message | 
 **cta_url** | **str** | Path to feature | 
-**read** | **bool** | Company read announcement | [optional] 
+**read** | **bool** | AffiliateAccountLightweight read announcement | [optional] 
 **marked_as_removed** | **bool** | Message marked as removed | [optional] 
 **notify_via_email** | **bool** | Also send email announcement | [optional] 
 

@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**user** | [**AuthenticatedUser**](AuthenticatedUser.md) |  | 
+**user** | [**AuthenticatedUser**](AuthenticatedUser.md) | The user making the booking | 
 **affiliate_account_identifier** | **str** | affiliate account making the request | 
 **affiliate_account_identifier_type** | **str** | Type of identifier this is | 
 **display_currency** | **str** | The desired quote | [default to 'USD']

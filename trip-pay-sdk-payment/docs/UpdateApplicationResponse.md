@@ -7,8 +7,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **str** | Unique identifier. | 
 **name** | **str** | Name of the application. | [optional] 
-**entity** | [**ManagingEntity**](ManagingEntity.md) |  | 
-**redirect_uris** | **List[str]** |  | [optional] 
+**entity** | [**ManagingEntity**](ManagingEntity.md) | Name of the application. | 
+**redirect_uris** | **List[object]** |  | [optional] 
 
 ## Example
 

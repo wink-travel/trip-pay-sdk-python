@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**contract** | [**PayableContractRequest**](PayableContractRequest.md) |  | 
+**contract** | [**PayableContractRequest**](PayableContractRequest.md) | contract that started it all | 
 
 ## Example
 

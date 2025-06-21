@@ -1,6 +1,5 @@
 # Contact
 
-The owning user entity.
 
 ## Properties
 

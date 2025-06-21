@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **owner_identifier** | **str** | Unique owner record identifier | 
 **owner_name** | **str** | Name of company owner. | 
 **owner_type** | **str** | Type of entity. | 
-**name** | **str** | Name of this engine application. The first engine for every integrator will have the same name as its company name. | 
+**name** | **str** | Name of this customization application. The first customization for every integrator will have the same name as its company name. | 
 **redirect_uris** | **List[str]** | Where to redirect after web components successfully authenticate. For OAuth2 purposes. | [optional] 
 **client_id** | **str** | Client identifier used to authenticate an Oauth2 or web component request. | 
 

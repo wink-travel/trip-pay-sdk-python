@@ -1,6 +1,5 @@
 # GuestUser
 
-Person doing the booking.
 
 ## Properties
 
@@ -11,7 +10,7 @@ Name | Type | Description | Notes
 **last_name** | **str** | Last name | 
 **email** | **str** | Email | 
 **telephone** | **str** | Telephone | [optional] 
-**profile** | [**Profile**](Profile.md) |  | [optional] 
+**profile** | [**ProfileLightweight**](ProfileLightweight.md) | Optional profile record | [optional] 
 **full_name** | **str** | Full name | [optional] [readonly] 
 
 ## Example

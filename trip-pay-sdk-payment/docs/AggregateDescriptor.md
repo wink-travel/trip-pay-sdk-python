@@ -1,6 +1,5 @@
 # AggregateDescriptor
 
-Primitive aggregate data points
 
 ## Properties
 

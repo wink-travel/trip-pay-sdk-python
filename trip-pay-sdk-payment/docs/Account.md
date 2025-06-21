@@ -16,19 +16,19 @@ Name | Type | Description | Notes
 **name** | **str** | Name of company / full name of person | 
 **legal_name** | **str** | Legal name of entity if other than name | [optional] 
 **user_identifier** | **str** | The authenticated user that owns this account. | 
-**owner** | [**Contact**](Contact.md) |  | 
+**owner** | [**Contact**](Contact.md) | The owning user entity. | 
 **account_email** | **str** | Account email is where we will send KYC documents and other account specific mailings | 
 **account_phone_number** | **str** | Account phone number is mostly used for KYC purchases | [optional] 
 **description** | **str** | Short company / person description. | 
-**url** | **str** | Company website. If private person with no personal website, link to main social network account. | 
-**status** | **str** | Account status shows if it&#39;s approved | [optional] [default to 'REGISTERED']
+**url** | **str** | AffiliateAccountLightweight website. If private person with no personal website, link to main social network account. | 
+**status** | **str** | Account status shows if it&#39;s approved | [default to 'REGISTERED']
 **currency_code** | **str** | Account&#39;s main currency. | 
-**address** | [**Address**](Address.md) |  | 
-**acquirers** | [**List[Integrator]**](Integrator.md) |  | [optional] 
+**address** | [**Address**](Address.md) | Account address. Usually the business address | 
+**acquirers** | **List[object]** |  | [optional] 
 **bank_accounts** | [**List[BankAccount]**](BankAccount.md) |  | [optional] 
 **owner_type_identifier** | **str** | This is the tax identification number (TIN) for individuals and entity identification number (EIN) for companies. | [optional] 
 **dob** | **date** | This is the individual&#39;s date of birth. | [optional] 
-**tasks** | [**List[AccountStatusEntry]**](AccountStatusEntry.md) |  | [optional] 
+**tasks** | **List[object]** |  | [optional] 
 **preferred_disbursement_type** | **str** | The preferred method which the account holder wishes to be paid. This will play a role if we choose to automate the payout flow. | [optional] [default to 'BANK_TRANSFER']
 **vat_id** | **str** | An optional VAT ID | [optional] 
 
