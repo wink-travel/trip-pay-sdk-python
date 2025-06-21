@@ -10,11 +10,11 @@ Name | Type | Description | Notes
 **created_date** | **datetime** | Datetime this record was first created | [optional] 
 **last_update** | **datetime** | Datetime this record was last updated | [optional] 
 **version** | **int** | Version property that shows how many times this document has been persisted. Document will not persist if the version property is less than current version property in the system. Result in an optimistic locking exception. | [optional] 
-**affiliate** | [**AffiliateInformation**](AffiliateInformation.md) |  | 
+**affiliate** | [**AffiliateInformation**](AffiliateInformation.md) | Affiliate account making the request | 
 **display_currency** | **str** | The desired quote | [default to 'USD']
 **redirect_url** | **str** | Where to redirect to after booking [in-]complete | 
-**contract** | [**PricedSupplierContractWithAcquirer**](PricedSupplierContractWithAcquirer.md) |  | 
-**acquirer_list** | [**List[Integrator]**](Integrator.md) |  | 
+**contract** | [**PricedSupplierContractWithAcquirer**](PricedSupplierContractWithAcquirer.md) | Validated and priced contract | 
+**acquirer_list** | **List[object]** |  | 
 **metadata** | **Dict[str, str]** | Depending on the acquirer, we put in required data for creating the payment. | [optional] 
 **instant** | **datetime** | Date to attach TTL. Self-deletes after 1 hour of unuse. | 
 

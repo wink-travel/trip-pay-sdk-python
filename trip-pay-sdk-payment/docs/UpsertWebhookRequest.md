@@ -6,10 +6,10 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **str** | Descriptive name of webhook. | 
-**entity** | [**ManagingEntity**](ManagingEntity.md) |  | 
+**entity** | [**ManagingEntity**](ManagingEntity.md) | Name of the application. | 
 **enabled** | **bool** | Whether this webhook is enabled. | [default to True]
 **event_url** | **str** | The url to POST event to. | 
-**event_list** | **List[str]** |  | 
+**event_list** | **List[object]** |  | 
 
 ## Example
 

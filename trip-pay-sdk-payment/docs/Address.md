@@ -11,9 +11,9 @@ Name | Type | Description | Notes
 **state** | **str** | State | [optional] 
 **postal_code** | **str** | Postal / zip code | [optional] 
 **county** | **str** | County | [optional] 
-**city** | [**GeoName**](GeoName.md) |  | 
+**city** | [**GeoNameLightweight**](GeoNameLightweight.md) | City geo name object | 
 **valid** | **bool** | Whether this address is considered valid by the system or not | [optional] [readonly] 
-**full_address** | **str** | Address 1, Address 2, City, State, Postal / Zip code, Country | [optional] [readonly] 
+**full_address** | **str** | Address 1, Address 2, City, State, Postal / Zip code, CountryLightweight | [optional] [readonly] 
 
 ## Example
 

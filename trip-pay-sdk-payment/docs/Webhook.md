@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **name** | **str** | Descriptive name of webhook. | 
 **enabled** | **bool** | Whether this webhook is enabled. | [default to True]
 **event_url** | **str** | The url to POST event to. | 
-**event_list** | **List[str]** |  | 
+**event_list** | **List[object]** |  | 
 
 ## Example
 

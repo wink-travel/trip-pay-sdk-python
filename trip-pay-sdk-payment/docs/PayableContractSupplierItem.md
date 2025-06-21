@@ -6,10 +6,10 @@ Holds one booking line item for a specific supplier.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**user** | [**GuestUser**](GuestUser.md) |  | 
+**user** | [**GuestUser**](GuestUser.md) | Person doing the booking. | 
 **name_in_english** | **str** | Name of item in English included in booking. | 
 **description_in_english** | **str** | Short description in English of item included in booking. | 
-**price** | [**CustomMonetaryAmount**](CustomMonetaryAmount.md) |  | 
+**price** | [**CustomMonetaryAmount**](CustomMonetaryAmount.md) | Raw incoming price. | 
 **itinerary** | [**SimpleDateTimeItinerary**](SimpleDateTimeItinerary.md) |  | 
 **pricing_type** | **str** | Indicates the way this item should be priced. | 
 **type** | **str** | Type of item this is. | 
@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 **payable** | **str** | When to charge for this item. | 
 **policy** | [**SupplierContractItemPolicy**](SupplierContractItemPolicy.md) |  | [optional] 
 **external_identifier** | **str** | Optional geoname externalIdentifier to remote blocking. | [optional] 
-**daily_rate_list** | [**List[RawDailyRate]**](RawDailyRate.md) |  | [optional] 
+**daily_rate_list** | **List[object]** |  | [optional] 
 **metadata** | **Dict[str, str]** | Place to add more data related to the booking contract item. | [optional] 
 
 ## Example

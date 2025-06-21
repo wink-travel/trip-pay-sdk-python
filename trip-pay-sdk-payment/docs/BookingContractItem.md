@@ -1,6 +1,5 @@
 # BookingContractItem
 
-Holds one booking line item for a specific supplier.
 
 ## Properties
 
@@ -18,7 +17,7 @@ Name | Type | Description | Notes
 **policy** | [**SupplierContractItemPolicy**](SupplierContractItemPolicy.md) |  | [optional] 
 **external_identifier** | **str** | Optional externalIdentifier to remote inventory. | [optional] 
 **tokens_earned** | **int** | Tokens minted for this item | [optional] 
-**daily_rate_list** | [**List[DailyRate]**](DailyRate.md) |  | [optional] 
+**daily_rate_list** | **List[object]** |  | [optional] 
 **cancelled** | **bool** | Optional geoname externalIdentifier to remote inventory. | [optional] 
 **source_currency** | **str** | The source currency | 
 **display_currency** | **str** | The display currency | 

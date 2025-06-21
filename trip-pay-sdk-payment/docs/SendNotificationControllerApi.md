@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **create_notification**
-> List[NotificationView] create_notification(send_notification, wink_version=wink_version)
+> List[Notification] create_notification(send_notification, wink_version=wink_version)
 
 ### Example
 
@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 ```python
 import trip_pay_payment
-from trip_pay_payment.models.notification_view import NotificationView
+from trip_pay_payment.models.notification import Notification
 from trip_pay_payment.models.send_notification import SendNotification
 from trip_pay_payment.rest import ApiException
 from pprint import pprint
@@ -61,7 +61,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List[NotificationView]**](NotificationView.md)
+[**List[Notification]**](Notification.md)
 
 ### Authorization
 

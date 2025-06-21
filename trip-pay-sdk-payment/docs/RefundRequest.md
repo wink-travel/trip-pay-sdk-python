@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**refund** | [**CustomMonetaryAmount**](CustomMonetaryAmount.md) |  | 
+**refund** | [**CustomMonetaryAmount**](CustomMonetaryAmount.md) | The amount refunded | 
 **description** | **str** | A description of the refund that can be displayed to booker | 
 **reason_type** | **str** | A description of the refund that can be displayed to booker | 
 **cancel_on_refund** | **str** | Whether to cancel the booking alongside requesting a refund. | 

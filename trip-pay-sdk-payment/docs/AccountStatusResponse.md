@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **account_identifier** | **str** | Local account identifier. | 
 **status** | **str** | Account status shows if it&#39;s approved | 
-**task_list** | [**List[AccountStatusEntry]**](AccountStatusEntry.md) |  | [optional] 
+**task_list** | **List[object]** |  | [optional] 
 
 ## Example
 

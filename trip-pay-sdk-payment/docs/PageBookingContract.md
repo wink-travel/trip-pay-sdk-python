@@ -1,6 +1,5 @@
 # PageBookingContract
 
-Page of booking contracts
 
 ## Properties
 

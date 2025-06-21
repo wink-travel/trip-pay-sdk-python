@@ -8,9 +8,8 @@ from trip_pay_payment.api.affiliate_api import AffiliateApi
 from trip_pay_payment.api.agent_api import AgentApi
 from trip_pay_payment.api.application_api import ApplicationApi
 from trip_pay_payment.api.contract_api import ContractApi
-from trip_pay_payment.api.external_event_api import ExternalEventApi
 from trip_pay_payment.api.mapping_api import MappingApi
-from trip_pay_payment.api.notification_api import NotificationApi
+from trip_pay_payment.api.notification_lightweight_api import NotificationLightweightApi
 from trip_pay_payment.api.ping_api import PingApi
 from trip_pay_payment.api.webhook_api import WebhookApi
 from trip_pay_payment.api.send_notification_controller_api import SendNotificationControllerApi

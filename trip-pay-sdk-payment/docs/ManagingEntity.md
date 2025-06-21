@@ -1,6 +1,5 @@
 # ManagingEntity
 
-Name of the application.
 
 ## Properties
 
@@ -10,6 +9,7 @@ Name | Type | Description | Notes
 **name** | **str** | Text representation of the value. | 
 **type** | **str** | Type of entity. | 
 **sub_type** | **str** | This is for Wink entities only. Does not apply to TripPay. | 
+**price_lookup_key** | **str** | price lookup key | [optional] 
 
 ## Example
 

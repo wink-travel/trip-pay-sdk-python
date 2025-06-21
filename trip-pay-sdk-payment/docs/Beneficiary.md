@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **account_email** | **str** | accountEmail of beneficiary that can map to an account with us | 
 **account_url** | **str** | accountUrl of beneficiary that can map to an account with us | [optional] 
 **type** | **str** | The type of beneficiary payment. | 
-**amount_due** | [**BeneficiaryCharge**](BeneficiaryCharge.md) |  | [optional] 
+**amount_due** | [**BeneficiaryCharge**](BeneficiaryCharge.md) | The original slice requested | [optional] 
 **source_currency** | **str** | The source currency | 
 **display_currency** | **str** | The display currency | 
 **supplier_currency** | **str** | The supplier currency | 
@@ -27,7 +27,7 @@ Name | Type | Description | Notes
 **supplier_amount_refund_modifier** | **float** | The delta from the original supplier amount after a refund occurred | 
 **internal_amount_refund_modifier** | **float** | The delta from the original internal amount after a refund occurred | 
 **capture_amount_refund_modifier** | **float** | The delta from the original capture amount after a refund occurred | 
-**pending_refunds** | [**List[PendingRefund]**](PendingRefund.md) |  | [optional] 
+**pending_refunds** | **List[object]** |  | [optional] 
 **net_source_amount** | **float** | Source amount minus source modifier. | 
 **net_display_amount** | **float** | Display amount minus display modifier. | 
 **net_supplier_amount** | **float** | Supplier amount minus supplier modifier. | 

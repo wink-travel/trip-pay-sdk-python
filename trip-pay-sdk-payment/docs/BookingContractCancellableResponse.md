@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **identifier** | **str** | Booking contract identifier | [optional] 
 **cancellable** | **bool** | Whether the booking is cancellable or not | [optional] 
-**list** | [**List[BookingContractItemCancellableResponse]**](BookingContractItemCancellableResponse.md) |  | [optional] 
+**list** | **List[object]** |  | [optional] 
 
 ## Example
 

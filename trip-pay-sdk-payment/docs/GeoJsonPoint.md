@@ -1,6 +1,5 @@
 # GeoJsonPoint
 
-Coordinate points of the city
 
 ## Properties
 

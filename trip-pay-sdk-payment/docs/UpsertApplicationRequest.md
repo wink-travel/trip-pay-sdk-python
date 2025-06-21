@@ -6,8 +6,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **str** | Name of the application. | 
-**entity** | [**ManagingEntity**](ManagingEntity.md) |  | 
-**redirect_uris** | **List[str]** |  | 
+**entity** | [**ManagingEntity**](ManagingEntity.md) | Name of the application. | 
+**redirect_uris** | **List[object]** |  | 
 
 ## Example
 

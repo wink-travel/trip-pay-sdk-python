@@ -5,8 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**mapping** | [**Mapping**](Mapping.md) |  | 
-**booking_contract** | [**BookingContract**](BookingContract.md) |  | 
+**mapping** | [**Mapping**](Mapping.md) | The mapped account entity | 
+**booking_contract** | [**BookingContract**](BookingContract.md) | The booking contract | 
 
 ## Example
 

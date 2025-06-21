@@ -6,8 +6,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **identifiers** | **List[str]** | identifiers of entities we want to create a announcement for | [optional] 
-**priority** | **str** | Notification importance | 
-**type** | **str** | Notification type | 
+**priority** | **str** | NotificationLightweight importance | 
+**type** | **str** | NotificationLightweight type | 
 **recipient_type** | **str** | Recipient type | 
 **application** | **str** | Application domain | 
 **message_template_id** | **str** | Which text template to use | 

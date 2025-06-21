@@ -1,6 +1,5 @@
 # FilterDescriptor
 
-Descriptors used for filtering the result set
 
 ## Properties
 
@@ -8,7 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **var_field** | **str** | Field name to filter on | 
 **operator** | **str** | Filter operator to use on field | 
-**value** | **object** | Value to filter dataset against | 
+**value** | **object** |  | 
 **ignore_case** | **bool** | Make filter comparison case insensitive. Default: Case sensitive  | [optional] 
 
 ## Example
