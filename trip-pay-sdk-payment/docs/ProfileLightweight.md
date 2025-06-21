@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**profile_identifier** | **str** | ProfileLightweight identifier | 
+**profile_identifier** | **str** | Profile identifier | 
 **user_identifier** | **str** | User identifier | 
 **share** | **bool** | Indicates whether the user wants to share this profile of themselves with hotel(s) | 
 **user** | [**ProfileUser**](ProfileUser.md) | User details | 

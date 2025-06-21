@@ -1,6 +1,6 @@
 # CountryLightweight
 
-CountryLightweight
+Country
 
 ## Properties
 
@@ -10,19 +10,19 @@ Name | Type | Description | Notes
 **iso3** | **str** | 3 character ISO code | [optional] 
 **iso_numeric** | **int** | Numeric ISO code | [optional] 
 **fips** | **str** | FIPS country code | [optional] 
-**name** | **str** | CountryLightweight name | [optional] 
-**capital** | **str** | CountryLightweight capital | [optional] 
+**name** | **str** | Country name | [optional] 
+**capital** | **str** | Country capital | [optional] 
 **area** | **float** | Area in square kilometers | [optional] 
-**population** | **int** | CountryLightweight population | [optional] 
+**population** | **int** | Country population | [optional] 
 **continent** | **str** | Continent code | [optional] 
-**top_level_domain** | **str** | CountryLightweight TLD | [optional] 
+**top_level_domain** | **str** | Country TLD | [optional] 
 **currency_code** | **str** | Currency code | [optional] 
 **currency_name** | **str** | Currency name | [optional] 
 **phone** | **str** | Calling code | [optional] 
 **postal_code_format** | **str** | Postal code format | [optional] 
 **postal_code_reg_ex** | **str** | Postal code regular expression | [optional] 
 **languages** | **List[object]** |  | [optional] 
-**geo_name_id** | **str** | CountryLightweight GeoNames identifier | [optional] 
+**geo_name_id** | **str** | Country GeoNames identifier | [optional] 
 **neighbors** | **List[object]** |  | [optional] 
 
 ## Example

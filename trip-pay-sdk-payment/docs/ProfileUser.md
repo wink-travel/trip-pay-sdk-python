@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **last_name** | **str** | Last name | [optional] 
 **email** | **str** | Email | [optional] 
 **phone** | **str** | Telephone | [optional] 
-**profile_picture_url** | **str** | ProfileLightweight picture URL | [optional] 
+**profile_picture_url** | **str** | Profile picture URL | [optional] 
 **full_name** | **str** | Full name | [optional] [readonly] 
 
 ## Example

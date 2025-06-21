@@ -27,9 +27,9 @@ Name | Type | Description | Notes
 **timezone** | **str** | Timezone | [optional] 
 **modification_date** | **date** |  | [optional] 
 **radius_in_meters** | **int** |  | [optional] 
-**country** | [**CountryLightweight**](CountryLightweight.md) | CountryLightweight | [optional] 
-**sub_country** | [**SubCountryLightweight**](SubCountryLightweight.md) | CountryLightweight sub division | [optional] 
-**sub_sub_country** | [**SubSubCountryLightweight**](SubSubCountryLightweight.md) | CountryLightweight sub sub division | [optional] 
+**country** | [**CountryLightweight**](CountryLightweight.md) | Country | [optional] 
+**sub_country** | [**SubCountryLightweight**](SubCountryLightweight.md) | Country sub division | [optional] 
+**sub_sub_country** | [**SubSubCountryLightweight**](SubSubCountryLightweight.md) | Country sub sub division | [optional] 
 
 ## Example
 
