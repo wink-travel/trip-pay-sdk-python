@@ -152,12 +152,12 @@ Name | Type | Description | Notes
 **platform_identifier** | **str** | Returns the account identifier for the beneficiary taking a platform fee | [optional] 
 **total_funds_grouped_by_beneficiary** | [**List[Beneficiary]**](Beneficiary.md) | Returns all the beneficiaries in this contract with their total amounts | [optional] 
 **total_tokens_earned** | **int** | Sums up all tokens earned on the contract | [optional] 
+**refundable** | **bool** |  | [optional] 
 **cancellable_by_traveler** | **bool** | Whether the booking can still be cancelled completely by the traveller. | [optional] 
 **cancellable_by_supplier_or_agent** | **bool** | Whether the booking can still be cancelled completely by the supplier. | [optional] 
 **cancellable_with_no_charges** | **bool** | Whether the cancellation comes at no cost to the traveler. | [optional] 
 **cancellable_with_potential_charges** | **bool** | Whether a cancellation comes with partial charges. I.e. Only some of the items in contract are not fully refundable. | [optional] 
 **refunded** | **bool** |  | [optional] 
-**refundable** | **bool** |  | [optional] 
 
 ## Example
 
