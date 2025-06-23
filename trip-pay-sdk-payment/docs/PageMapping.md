@@ -10,11 +10,11 @@ Name | Type | Description | Notes
 **size** | **int** |  | [optional] 
 **content** | [**List[Mapping]**](Mapping.md) |  | [optional] 
 **number** | **int** |  | [optional] 
+**sort** | [**SortObject**](SortObject.md) |  | [optional] 
+**number_of_elements** | **int** |  | [optional] 
+**pageable** | [**PageableObject**](PageableObject.md) |  | [optional] 
 **first** | **bool** |  | [optional] 
 **last** | **bool** |  | [optional] 
-**number_of_elements** | **int** |  | [optional] 
-**sort** | [**SortObject**](SortObject.md) |  | [optional] 
-**pageable** | [**PageableObject**](PageableObject.md) |  | [optional] 
 **empty** | **bool** |  | [optional] 
 
 ## Example
