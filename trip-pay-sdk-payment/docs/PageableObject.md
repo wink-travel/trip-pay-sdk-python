@@ -6,11 +6,11 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **offset** | **int** |  | [optional] 
-**paged** | **bool** |  | [optional] 
 **sort** | [**SortObject**](SortObject.md) |  | [optional] 
-**unpaged** | **bool** |  | [optional] 
 **page_number** | **int** |  | [optional] 
+**paged** | **bool** |  | [optional] 
 **page_size** | **int** |  | [optional] 
+**unpaged** | **bool** |  | [optional] 
 
 ## Example
 
