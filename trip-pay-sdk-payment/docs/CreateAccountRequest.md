@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **account_email** | **str** | Account email is where we will send KYC documents and other account specific mailings | 
 **account_phone_number** | **str** | Account phone number is mostly used for KYC purchases | [optional] 
 **description** | **str** | Short company / person description. | 
-**url** | **str** | AffiliateAccountLightweight website. If private person with no personal website, link to main social network account. | 
+**url** | **str** | AffiliateAccount website. If private person with no personal website, link to main social network account. | 
 **currency_code** | **str** | Account&#39;s main currency. | 
 **address** | [**UpsertCityOnlyAddressRequest**](UpsertCityOnlyAddressRequest.md) | Account address. Usually the business address | [optional] 
 **acquirers** | **List[object]** |  | [optional] 

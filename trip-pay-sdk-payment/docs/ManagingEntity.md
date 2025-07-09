@@ -9,6 +9,8 @@ Name | Type | Description | Notes
 **name** | **str** | Text representation of the value. | 
 **type** | **str** | Type of entity. | 
 **sub_type** | **str** | This is for Wink entities only. Does not apply to TripPay. | 
+**url_name** | **str** | Entity url slug if available. | [optional] 
+**image_identifier** | **str** | Entity account icon if available. | [optional] 
 **price_lookup_key** | **str** | price lookup key | [optional] 
 
 ## Example
