@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **subject** | **str** | Subject of message | 
 **body** | **str** | Subject of message | 
 **cta_url** | **str** | Path to feature | 
-**read** | **bool** | AffiliateAccountLightweight read announcement | [optional] 
+**read** | **bool** | AffiliateAccount read announcement | [optional] 
 **marked_as_removed** | **bool** | Message marked as removed | [optional] 
 **notify_via_email** | **bool** | Also send email announcement | [optional] 
 

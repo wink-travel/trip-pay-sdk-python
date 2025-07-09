@@ -8,8 +8,8 @@ Name | Type | Description | Notes
 **name** | **str** | Name of company / full name of person | 
 **legal_name** | **str** | Legal name of entity if other than name | [optional] 
 **description** | **str** | Short company / person description. | 
-**url** | **str** | AffiliateAccountLightweight website. If private person with no personal website, link to main social network account. | 
-**account_email** | **str** | AffiliateAccountLightweight website. If private person with no personal website, link to main social network account. | 
+**url** | **str** | AffiliateAccount website. If private person with no personal website, link to main social network account. | 
+**account_email** | **str** | AffiliateAccount website. If private person with no personal website, link to main social network account. | 
 **account_phone_number** | **str** | Account phone number is mostly used for KYC purchases | [optional] 
 **currency_code** | **str** | Account&#39;s main currency. | 
 **address** | [**UpsertAddressRequest**](UpsertAddressRequest.md) | Account address. Usually the business address | 

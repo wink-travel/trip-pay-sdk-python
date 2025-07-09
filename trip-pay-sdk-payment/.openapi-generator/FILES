@@ -53,6 +53,7 @@ docs/ImmediateRefundRequest.md
 docs/Integrator.md
 docs/KeyValuePair.md
 docs/ManagingEntity.md
+docs/ManagingEntityApi.md
 docs/Mapping.md
 docs/MappingApi.md
 docs/MultiBookingContractResponse.md
@@ -110,6 +111,7 @@ setup.cfg
 setup.py
 test-requirements.txt
 test/__init__.py
+test/test_managing_entity_api.py
 tox.ini
 trip_pay_payment/__init__.py
 trip_pay_payment/api/__init__.py
@@ -120,6 +122,7 @@ trip_pay_payment/api/affiliate_api.py
 trip_pay_payment/api/agent_api.py
 trip_pay_payment/api/application_api.py
 trip_pay_payment/api/contract_api.py
+trip_pay_payment/api/managing_entity_api.py
 trip_pay_payment/api/mapping_api.py
 trip_pay_payment/api/notification_api.py
 trip_pay_payment/api/ping_api.py
