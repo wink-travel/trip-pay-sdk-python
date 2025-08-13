@@ -7,7 +7,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **str** | Unique identifier. | 
 **name** | **str** | Name of the application. | [optional] 
-**entity** | [**ManagingEntity**](ManagingEntity.md) | Name of the application. | 
+**owner_identifier** | **str** | Owner ID. | 
+**owner_name** | **str** | Text representation of the value. | 
+**owner_type** | **str** | Type of entity. | 
 **redirect_uris** | **List[object]** |  | [optional] 
 
 ## Example

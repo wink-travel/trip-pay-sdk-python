@@ -6,7 +6,7 @@ Details of the booking entries that went in for one particular supplier directly
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **str** | TripPay supplierContractIdentifier for reactive widget | 
+**id** | **str** | TripPay supplierContractIdentifier for payment widget | 
 **trace_id** | **str** | Groups all booking contracts submitted at the same time | [optional] 
 **supplier_contract_identifier** | **str** | Unique supplierContractIdentifier used to track the contract. Create a UUID for this purpose. | 
 **supplier_identifier** | **str** | Supplier supplierContractIdentifier | 

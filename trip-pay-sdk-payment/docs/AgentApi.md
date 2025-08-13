@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 Create Agent Payment
 
-Attempt an immediate reactive with Agent as acquirer. Checks for valid funds in account before booking instruction.
+Attempt an immediate payment with Agent as acquirer. Checks for valid funds in account before booking instruction.
 
 ### Example
 

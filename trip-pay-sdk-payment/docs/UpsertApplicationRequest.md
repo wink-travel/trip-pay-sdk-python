@@ -6,7 +6,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **str** | Name of the application. | 
-**entity** | [**ManagingEntity**](ManagingEntity.md) | Name of the application. | 
+**owner_identifier** | **str** | Owner ID. | 
+**owner_name** | **str** | Text representation of the value. | 
+**owner_type** | **str** | Type of entity. | 
 **redirect_uris** | **List[object]** |  | 
 
 ## Example
