@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**local_account_identifier** | **str** | Local account identifier is the reactive identifier | 
+**local_account_identifier** | **str** | Local account identifier is the local identifier | 
 **external_identifier** | **str** | External identifier is the identifier of this entity in a remote system | 
 
 ## Example

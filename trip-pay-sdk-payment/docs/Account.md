@@ -1,6 +1,6 @@
 # Account
 
-Account holds KYC, bank account and contact information of an affiliate, supplier, reactive or any type of entity that is to be a beneficiary of funds through the payment.
+Account holds KYC, bank account and contact information of an affiliate, supplier, user or any type of entity that is to be a beneficiary of funds through the payment.
 
 ## Properties
 

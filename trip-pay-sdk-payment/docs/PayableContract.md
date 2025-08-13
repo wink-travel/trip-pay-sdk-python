@@ -1,6 +1,6 @@
 # PayableContract
 
-A contract record is what gets saved upon pricing and converted to a BookingContract on reactive and subsequently removed.
+A contract record is what gets saved upon pricing and converted to a BookingContract on payment and subsequently removed.
 
 ## Properties
 

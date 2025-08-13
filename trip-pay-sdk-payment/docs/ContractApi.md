@@ -189,7 +189,7 @@ Name | Type | Description  | Notes
 
 Create payable contracts
 
-Returns a list of contracts that can be used alongside reactive widget to initiate a reactive.
+Returns a list of contracts that can be used alongside payment widget to initiate a payment.
 
 ### Example
 
