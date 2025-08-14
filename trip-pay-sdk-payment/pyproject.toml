@@ -1,6 +1,6 @@
 [project]
 name= "trip_pay_payment"
-version= "0.0.24"
+version= "0.0.25"
 description= "Wink Payment API"
 authors = [{ name = "Bjorn Harvold", email = "bjorn@wink.travel" }]
 license = { file = "LICENSE" }
@@ -9,7 +9,7 @@ keywords = ["OpenAPI", "OpenAPI-Generator", "Wink Payment API"]
 
 [tool.poetry]
 name = "trip_pay_payment"
-version = "0.0.24"
+version = "0.0.25"
 description = "Wink Payment API"
 authors = ["Bjorn Harvold <bjorn@wink.travel>"]
 license = "Apache License Version 2.0"
