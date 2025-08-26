@@ -6,10 +6,10 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **offset** | **int** |  | [optional] 
-**page_size** | **int** |  | [optional] 
-**paged** | **bool** |  | [optional] 
 **sort** | [**SortObject**](SortObject.md) |  | [optional] 
+**paged** | **bool** |  | [optional] 
 **page_number** | **int** |  | [optional] 
+**page_size** | **int** |  | [optional] 
 **unpaged** | **bool** |  | [optional] 
 
 ## Example
