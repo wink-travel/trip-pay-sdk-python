@@ -111,8 +111,8 @@ to_snake_case() {
   local input="$1"
   # Replace hyphens with underscores
   input="${input//-/_}"
-  # Convert to lowercase
-  echo "${input,,}"
+  # Convert to lowercase with tr
+  echo "$input" | tr '[:upper:]' '[:lower:]'
 }
 
 # Generate SDK configs and SDK's
