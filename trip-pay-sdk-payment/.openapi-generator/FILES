@@ -8,9 +8,6 @@ docs/AccountApi.md
 docs/AccountMappingsApi.md
 docs/AccountStatusResponse.md
 docs/AcquirerCredentials.md
-docs/ActivityStream.md
-docs/ActivityStreamApi.md
-docs/ActivityStreamUser.md
 docs/Address.md
 docs/AffiliateApi.md
 docs/AffiliateDetailsRequest.md
@@ -79,8 +76,6 @@ docs/QuoteLightweight.md
 docs/RefundRequest.md
 docs/RemoveEntryResponse.md
 docs/RevokeClientIdResponse.md
-docs/SendNotification.md
-docs/SendNotificationControllerApi.md
 docs/SetTaxIdentifierRequest.md
 docs/SimpleDateTimeItinerary.md
 docs/SortDescriptor.md
@@ -95,7 +90,6 @@ docs/UpdateApplicationResponse.md
 docs/UpdateMappingRequest.md
 docs/UpsertAccountMappingRequest.md
 docs/UpsertAccountRequest.md
-docs/UpsertActivityStreamRequest.md
 docs/UpsertAddressRequest.md
 docs/UpsertApplicationRequest.md
 docs/UpsertBankAccountRequest.md
@@ -116,7 +110,6 @@ trip_pay_payment/__init__.py
 trip_pay_payment/api/__init__.py
 trip_pay_payment/api/account_api.py
 trip_pay_payment/api/account_mappings_api.py
-trip_pay_payment/api/activity_stream_api.py
 trip_pay_payment/api/affiliate_api.py
 trip_pay_payment/api/agent_api.py
 trip_pay_payment/api/application_api.py
@@ -125,7 +118,6 @@ trip_pay_payment/api/managing_entity_api.py
 trip_pay_payment/api/mapping_api.py
 trip_pay_payment/api/notification_api.py
 trip_pay_payment/api/ping_api.py
-trip_pay_payment/api/send_notification_controller_api.py
 trip_pay_payment/api/webhook_api.py
 trip_pay_payment/api_client.py
 trip_pay_payment/api_response.py
@@ -135,8 +127,6 @@ trip_pay_payment/models/__init__.py
 trip_pay_payment/models/account.py
 trip_pay_payment/models/account_status_response.py
 trip_pay_payment/models/acquirer_credentials.py
-trip_pay_payment/models/activity_stream.py
-trip_pay_payment/models/activity_stream_user.py
 trip_pay_payment/models/address.py
 trip_pay_payment/models/affiliate_details_request.py
 trip_pay_payment/models/affiliate_information.py
@@ -197,7 +187,6 @@ trip_pay_payment/models/quote_lightweight.py
 trip_pay_payment/models/refund_request.py
 trip_pay_payment/models/remove_entry_response.py
 trip_pay_payment/models/revoke_client_id_response.py
-trip_pay_payment/models/send_notification.py
 trip_pay_payment/models/set_tax_identifier_request.py
 trip_pay_payment/models/simple_date_time_itinerary.py
 trip_pay_payment/models/sort_descriptor.py
@@ -212,7 +201,6 @@ trip_pay_payment/models/update_application_response.py
 trip_pay_payment/models/update_mapping_request.py
 trip_pay_payment/models/upsert_account_mapping_request.py
 trip_pay_payment/models/upsert_account_request.py
-trip_pay_payment/models/upsert_activity_stream_request.py
 trip_pay_payment/models/upsert_address_request.py
 trip_pay_payment/models/upsert_application_request.py
 trip_pay_payment/models/upsert_bank_account_request.py
