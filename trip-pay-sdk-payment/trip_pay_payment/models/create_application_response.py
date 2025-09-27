@@ -21,6 +21,7 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
+from uuid import UUID
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -28,8 +29,8 @@ class CreateApplicationResponse(BaseModel):
     """
     CreateApplicationResponse
     """ # noqa: E501
-    id: Annotated[str, Field(min_length=1, strict=True)] = Field(description="Unique identifier.")
-    owner_identifier: Annotated[str, Field(min_length=1, strict=True)] = Field(description="Unique owner record identifier", alias="ownerIdentifier")
+    id: UUID = Field(description="Unique identifier.")
+    owner_identifier: UUID = Field(description="Unique owner record identifier", alias="ownerIdentifier")
     owner_name: Annotated[str, Field(min_length=1, strict=True)] = Field(description="Name of company owner.", alias="ownerName")
     owner_type: StrictStr = Field(description="Type of entity.", alias="ownerType")
     name: Annotated[str, Field(min_length=1, strict=True)] = Field(description="Name of this customization application. The first customization for every integrator will have the same name as its company name.")

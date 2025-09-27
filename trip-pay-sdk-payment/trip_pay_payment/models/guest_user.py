@@ -21,6 +21,7 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
+from uuid import UUID
 from trip_pay_payment.models.profile_lightweight import ProfileLightweight
 from typing import Optional, Set
 from typing_extensions import Self
@@ -29,7 +30,7 @@ class GuestUser(BaseModel):
     """
     GuestUser
     """ # noqa: E501
-    user_identifier: Optional[StrictStr] = Field(default=None, description="User identifier", alias="userIdentifier")
+    user_identifier: Optional[UUID] = Field(default=None, description="User identifier", alias="userIdentifier")
     first_name: Annotated[str, Field(min_length=1, strict=True)] = Field(description="First name", alias="firstName")
     last_name: Annotated[str, Field(min_length=1, strict=True)] = Field(description="Last name", alias="lastName")
     email: Annotated[str, Field(min_length=1, strict=True)] = Field(description="Email")

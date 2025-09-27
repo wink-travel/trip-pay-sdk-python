@@ -21,6 +21,7 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
+from uuid import UUID
 from trip_pay_payment.models.authenticated_user import AuthenticatedUser
 from trip_pay_payment.models.custom_monetary_amount import CustomMonetaryAmount
 from trip_pay_payment.models.integrator import Integrator
@@ -38,8 +39,8 @@ class PricedSupplierContractWithAcquirer(BaseModel):
     ip_address: Annotated[str, Field(min_length=1, strict=True)] = Field(description="Caller's IP address", alias="ipAddress")
     trace_id: Annotated[str, Field(min_length=1, strict=True)] = Field(description="Way to track which booking contracts were made together", alias="traceId")
     source_url: Annotated[str, Field(min_length=1, strict=True)] = Field(description="Where did the booking occur", alias="sourceUrl")
-    identifier: Annotated[str, Field(min_length=1, strict=True)] = Field(description="Unique identifier used to track the contract. Create a UUID for this purpose.")
-    supplier_identifier: Annotated[str, Field(min_length=1, strict=True)] = Field(description="Supplier identifier", alias="supplierIdentifier")
+    identifier: UUID = Field(description="Unique identifier used to track the contract. Create a UUID for this purpose.")
+    supplier_identifier: UUID = Field(description="Supplier identifier", alias="supplierIdentifier")
     supplier_name: Annotated[str, Field(min_length=1, strict=True)] = Field(description="Supplier name", alias="supplierName")
     display_price_quote: QuoteLightweight = Field(description="The quote used to create totalDisplayPrice.", alias="displayPriceQuote")
     supplier_price_quote: QuoteLightweight = Field(description="The quote used to create totalSupplierPrice.", alias="supplierPriceQuote")

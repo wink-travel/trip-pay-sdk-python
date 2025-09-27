@@ -21,6 +21,7 @@ import json
 from pydantic import BaseModel, ConfigDict, Field
 from typing import Any, ClassVar, Dict, List
 from typing_extensions import Annotated
+from uuid import UUID
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -28,7 +29,7 @@ class UpsertAccountMappingRequest(BaseModel):
     """
     UpsertAccountMappingRequest
     """ # noqa: E501
-    local_account_identifier: Annotated[str, Field(min_length=1, strict=True)] = Field(description="Local account identifier is the local identifier", alias="localAccountIdentifier")
+    local_account_identifier: UUID = Field(description="Local account identifier is the local identifier", alias="localAccountIdentifier")
     external_identifier: Annotated[str, Field(min_length=1, strict=True)] = Field(description="External identifier is the identifier of this entity in a remote system", alias="externalIdentifier")
     __properties: ClassVar[List[str]] = ["localAccountIdentifier", "externalIdentifier"]
 

@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
-from typing_extensions import Annotated
+from uuid import UUID
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -28,7 +28,7 @@ class AccountStatusResponse(BaseModel):
     """
     Shows where the account is in terms of onboarding and readiness
     """ # noqa: E501
-    account_identifier: Annotated[str, Field(min_length=1, strict=True)] = Field(description="Local account identifier.", alias="accountIdentifier")
+    account_identifier: UUID = Field(description="Local account identifier.", alias="accountIdentifier")
     status: StrictStr = Field(description="Account status shows if it's approved")
     task_list: Optional[List[Any]] = Field(default=None, alias="taskList")
     __properties: ClassVar[List[str]] = ["accountIdentifier", "status", "taskList"]

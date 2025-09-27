@@ -21,6 +21,7 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictFloat, StrictInt, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Union
 from typing_extensions import Annotated
+from uuid import UUID
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -28,7 +29,7 @@ class BeneficiaryAggregateData(BaseModel):
     """
     BeneficiaryAggregateData
     """ # noqa: E501
-    account_identifier: Annotated[str, Field(min_length=1, strict=True)] = Field(description="Beneficiary account identifier", alias="accountIdentifier")
+    account_identifier: UUID = Field(description="Beneficiary account identifier", alias="accountIdentifier")
     account_name: Annotated[str, Field(min_length=1, strict=True)] = Field(description="Beneficiary account name", alias="accountName")
     type: StrictStr = Field(description="Type of payment to beneficiary")
     total_items_sold: StrictInt = Field(description="Total items sold", alias="totalItemsSold")

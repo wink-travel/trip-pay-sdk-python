@@ -22,6 +22,7 @@ from datetime import datetime
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
+from uuid import UUID
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -33,8 +34,8 @@ class Webhook(BaseModel):
     created_date: Optional[datetime] = Field(default=None, description="Datetime this record was first created", alias="createdDate")
     last_update: Optional[datetime] = Field(default=None, description="Datetime this record was last updated", alias="lastUpdate")
     version: Optional[StrictInt] = Field(default=None, description="Version property that shows how many times this document has been persisted. Document will not persist if the version property is less than current version property in the system. Result in an optimistic locking exception.")
-    user_identifier: Annotated[str, Field(min_length=1, strict=True)] = Field(description="Unique owner record identifier", alias="userIdentifier")
-    owner_identifier: Annotated[str, Field(min_length=1, strict=True)] = Field(description="Unique owner record identifier", alias="ownerIdentifier")
+    user_identifier: UUID = Field(description="Unique owner record identifier", alias="userIdentifier")
+    owner_identifier: UUID = Field(description="Unique owner record identifier", alias="ownerIdentifier")
     owner_name: Annotated[str, Field(min_length=1, strict=True)] = Field(description="Name of company owner.", alias="ownerName")
     owner_type: StrictStr = Field(description="Type of entity.", alias="ownerType")
     name: Annotated[str, Field(min_length=1, strict=True)] = Field(description="Descriptive name of webhook.")

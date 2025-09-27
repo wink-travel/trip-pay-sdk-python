@@ -21,6 +21,7 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
+from uuid import UUID
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -28,7 +29,7 @@ class BankAccount(BaseModel):
     """
     Accounts use bank accounts to get paid.
     """ # noqa: E501
-    identifier: Annotated[str, Field(min_length=1, strict=True)] = Field(description="Unique bank account identifier")
+    identifier: UUID = Field(description="Unique bank account identifier")
     country_code: Annotated[str, Field(min_length=1, strict=True)] = Field(description="Country of bank account", alias="countryCode")
     currency_code: Annotated[str, Field(min_length=1, strict=True)] = Field(description="Currency of bank account", alias="currencyCode")
     account_holder_name: Annotated[str, Field(min_length=1, strict=True)] = Field(description="Bank account holder name", alias="accountHolderName")

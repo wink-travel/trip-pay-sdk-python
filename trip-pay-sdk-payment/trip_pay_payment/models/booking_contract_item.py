@@ -67,11 +67,11 @@ class BookingContractItem(BaseModel):
     net_internal_amount: Union[Annotated[float, Field(strict=True, ge=0)], Annotated[int, Field(strict=True, ge=0)]] = Field(description="Internal amount minus internal modifier.", alias="netInternalAmount")
     net_capture_amount: Union[Annotated[float, Field(strict=True, ge=0)], Annotated[int, Field(strict=True, ge=0)]] = Field(description="Capture amount minus capture modifier.", alias="netCaptureAmount")
     metadata: Optional[Dict[str, StrictStr]] = Field(default=None, description="Place to add more data related to the booking contract item.")
-    cancellable_by_supplier_or_agent: Optional[StrictBool] = Field(default=None, description="Whether the booking can still be cancelled by the supplier. A supplier cancellation overrides the refundable", alias="cancellableBySupplierOrAgent")
     cancellable_by_traveler: Optional[StrictBool] = Field(default=None, description="Whether the booking can still be cancelled by the traveller.", alias="cancellableByTraveler")
     cancellable_with_potential_charges: Optional[StrictBool] = Field(default=None, description="Whether the booking can still be cancelled and whether cancellation charges might still occur.", alias="cancellableWithPotentialCharges")
+    cancellable_by_supplier_or_agent: Optional[StrictBool] = Field(default=None, description="Whether the booking can still be cancelled by the supplier. A supplier cancellation overrides the refundable", alias="cancellableBySupplierOrAgent")
     cancellable_with_no_charges: Optional[StrictBool] = Field(default=None, description="Whether the booking can still be cancelled and whether cancellation charges might still occur.", alias="cancellableWithNoCharges")
-    __properties: ClassVar[List[str]] = ["supplierItemBookingCode", "user", "nameInEnglish", "descriptionInEnglish", "itinerary", "pricingType", "type", "beneficiaryList", "payable", "policy", "externalIdentifier", "tokensEarned", "dailyRateList", "cancelled", "sourceCurrency", "displayCurrency", "supplierCurrency", "internalCurrency", "captureCurrency", "sourceAmount", "displayAmount", "supplierAmount", "internalAmount", "captureAmount", "sourceAmountRefundModifier", "displayAmountRefundModifier", "supplierAmountRefundModifier", "internalAmountRefundModifier", "captureAmountRefundModifier", "netSourceAmount", "netDisplayAmount", "netSupplierAmount", "netInternalAmount", "netCaptureAmount", "metadata", "cancellableBySupplierOrAgent", "cancellableByTraveler", "cancellableWithPotentialCharges", "cancellableWithNoCharges"]
+    __properties: ClassVar[List[str]] = ["supplierItemBookingCode", "user", "nameInEnglish", "descriptionInEnglish", "itinerary", "pricingType", "type", "beneficiaryList", "payable", "policy", "externalIdentifier", "tokensEarned", "dailyRateList", "cancelled", "sourceCurrency", "displayCurrency", "supplierCurrency", "internalCurrency", "captureCurrency", "sourceAmount", "displayAmount", "supplierAmount", "internalAmount", "captureAmount", "sourceAmountRefundModifier", "displayAmountRefundModifier", "supplierAmountRefundModifier", "internalAmountRefundModifier", "captureAmountRefundModifier", "netSourceAmount", "netDisplayAmount", "netSupplierAmount", "netInternalAmount", "netCaptureAmount", "metadata", "cancellableByTraveler", "cancellableWithPotentialCharges", "cancellableBySupplierOrAgent", "cancellableWithNoCharges"]
 
     @field_validator('pricing_type')
     def pricing_type_validate_enum(cls, value):
@@ -196,9 +196,9 @@ class BookingContractItem(BaseModel):
             "netInternalAmount": obj.get("netInternalAmount"),
             "netCaptureAmount": obj.get("netCaptureAmount"),
             "metadata": obj.get("metadata"),
-            "cancellableBySupplierOrAgent": obj.get("cancellableBySupplierOrAgent"),
             "cancellableByTraveler": obj.get("cancellableByTraveler"),
             "cancellableWithPotentialCharges": obj.get("cancellableWithPotentialCharges"),
+            "cancellableBySupplierOrAgent": obj.get("cancellableBySupplierOrAgent"),
             "cancellableWithNoCharges": obj.get("cancellableWithNoCharges")
         })
         return _obj

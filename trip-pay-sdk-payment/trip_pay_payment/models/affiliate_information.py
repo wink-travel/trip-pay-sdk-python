@@ -20,6 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
+from uuid import UUID
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -27,7 +28,7 @@ class AffiliateInformation(BaseModel):
     """
     Affiliate details response contains details about the affiliate facilitating the sale.
     """ # noqa: E501
-    affiliate_identifier: Optional[StrictStr] = Field(default=None, description="Affiliate identifier of entity making the same", alias="affiliateIdentifier")
+    affiliate_identifier: Optional[UUID] = Field(default=None, description="Affiliate identifier of entity making the same", alias="affiliateIdentifier")
     affiliate_name: Optional[StrictStr] = Field(default=None, description="Affiliate name of entity making the same", alias="affiliateName")
     affiliate_url: Optional[StrictStr] = Field(default=None, description="Affiliate url of entity making the same", alias="affiliateUrl")
     __properties: ClassVar[List[str]] = ["affiliateIdentifier", "affiliateName", "affiliateUrl"]

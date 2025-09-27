@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List
-from typing_extensions import Annotated
+from uuid import UUID
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -29,7 +29,7 @@ class AffiliateDetailsRequest(BaseModel):
     Request for affiliate details
     """ # noqa: E501
     type: StrictStr = Field(description="Account identifier type")
-    identifier: Annotated[str, Field(min_length=1, strict=True)] = Field(description="Account identifier")
+    identifier: UUID = Field(description="Account identifier")
     __properties: ClassVar[List[str]] = ["type", "identifier"]
 
     @field_validator('type')

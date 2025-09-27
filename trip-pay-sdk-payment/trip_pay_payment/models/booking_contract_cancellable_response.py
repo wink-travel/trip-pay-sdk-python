@@ -18,8 +18,9 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictBool
 from typing import Any, ClassVar, Dict, List, Optional
+from uuid import UUID
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -27,7 +28,7 @@ class BookingContractCancellableResponse(BaseModel):
     """
     Contract cancellable response object
     """ # noqa: E501
-    identifier: Optional[StrictStr] = Field(default=None, description="Booking contract identifier")
+    identifier: Optional[UUID] = Field(default=None, description="Booking contract identifier")
     cancellable: Optional[StrictBool] = Field(default=None, description="Whether the booking is cancellable or not")
     list: Optional[List[Any]] = None
     __properties: ClassVar[List[str]] = ["identifier", "cancellable", "list"]

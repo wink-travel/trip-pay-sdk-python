@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List
-from typing_extensions import Annotated
+from uuid import UUID
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -28,7 +28,7 @@ class RevokeClientIdResponse(BaseModel):
     """
     RevokeClientIdResponse
     """ # noqa: E501
-    id: Annotated[str, Field(min_length=1, strict=True)] = Field(description="Unique identifier.")
+    id: UUID = Field(description="Unique identifier.")
     client_id: StrictStr = Field(description="Client identifier used to authenticate an Oauth2 or web component request.", alias="clientId")
     secret_key: StrictStr = Field(description="Password used to authenticate an Oauth2 request.", alias="secretKey")
     __properties: ClassVar[List[str]] = ["id", "clientId", "secretKey"]

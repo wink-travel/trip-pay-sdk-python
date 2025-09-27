@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictBool
 from typing import Any, ClassVar, Dict, List
-from typing_extensions import Annotated
+from uuid import UUID
 from trip_pay_payment.models.personal import Personal
 from trip_pay_payment.models.preferences import Preferences
 from trip_pay_payment.models.profile_user import ProfileUser
@@ -31,8 +31,8 @@ class ProfileLightweight(BaseModel):
     """
     ProfileLightweight
     """ # noqa: E501
-    profile_identifier: Annotated[str, Field(min_length=1, strict=True)] = Field(description="Profile identifier", alias="profileIdentifier")
-    user_identifier: Annotated[str, Field(min_length=1, strict=True)] = Field(description="User identifier", alias="userIdentifier")
+    profile_identifier: UUID = Field(description="Profile identifier", alias="profileIdentifier")
+    user_identifier: UUID = Field(description="User identifier", alias="userIdentifier")
     share: StrictBool = Field(description="Indicates whether the user wants to share this profile of themselves with hotel(s)")
     user: ProfileUser = Field(description="User details")
     personal: Personal = Field(description="Detailed customer information for this profile")

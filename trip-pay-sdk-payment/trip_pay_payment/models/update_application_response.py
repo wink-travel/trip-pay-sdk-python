@@ -21,6 +21,7 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
+from uuid import UUID
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -28,7 +29,7 @@ class UpdateApplicationResponse(BaseModel):
     """
     UpdateApplicationResponse
     """ # noqa: E501
-    id: Annotated[str, Field(min_length=1, strict=True)] = Field(description="Unique identifier.")
+    id: UUID = Field(description="Unique identifier.")
     name: Optional[StrictStr] = Field(default=None, description="Name of the application.")
     owner_identifier: Annotated[str, Field(min_length=1, strict=True)] = Field(description="Owner ID.", alias="ownerIdentifier")
     owner_name: Annotated[str, Field(min_length=1, strict=True)] = Field(description="Text representation of the value.", alias="ownerName")
