@@ -13,8 +13,8 @@ Name | Type | Description | Notes
 **type** | **str** | Technology taking the charge | 
 **currency_code** | **str** | Currency in coverage region. | 
 **credentials** | [**List[AcquirerCredentials]**](AcquirerCredentials.md) |  | 
-**public_token** | **str** |  | [optional] 
 **webhook_secret** | **str** |  | [optional] 
+**public_token** | **str** |  | [optional] 
 
 ## Example
 
