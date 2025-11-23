@@ -2,6 +2,16 @@
 
 Changelog of trip-pay-sdk-python.
 
+## v0.0.46 (2025-11-22)
+
+### Other changes
+
+**Merge branch 'master' into develop**
+
+
+[08219](https://github.com/wink-travel/trip-pay-sdk-python/commit/08219cd6153ad2c) bjornharvold *2025-11-14 05:05:44*
+
+
 ## v0.0.45 (2025-11-14)
 
 ### Other changes
