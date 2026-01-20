@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **name** | **str** | Name of city | [optional] 
 **url_name** | **str** | Url name | [optional] 
 **ascii_name** | **str** | Ascii name of city | [optional] 
-**alternate_names** | **List[object]** |  | [optional] 
+**alternate_names** | **List[str]** | Array of alternate name | [optional] 
 **location** | [**GeoJsonPoint**](GeoJsonPoint.md) | Coordinate points of the city | [optional] 
 **feature_class** | **str** |  | [optional] 
 **feature_code** | **str** |  | [optional] 

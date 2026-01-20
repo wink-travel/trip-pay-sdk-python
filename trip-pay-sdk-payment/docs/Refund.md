@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **identifier** | **str** | A unique identifier | 
 **acquirer_refund_identifier** | **str** | The acquirer refund identifier. Will get attached once it comes in on the webhook. | [optional] 
 **requested_by_identifier** | **str** | The SSO person / entity that requested the refund. | [optional] 
-**refund** | [**CustomMonetaryAmount**](CustomMonetaryAmount.md) |  | 
+**refund** | [**CustomMonetaryAmount**](CustomMonetaryAmount.md) | The amount refunded | 
 **created** | **datetime** | When the amount was refunded | 
 **description** | **str** | A description of the refund that can be displayed to booker | 
 **reason_type** | **str** | A description of the refund that can be displayed to booker | 

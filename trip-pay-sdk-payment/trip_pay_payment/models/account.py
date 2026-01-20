@@ -5,7 +5,7 @@
 
      # Introduction  Welcome to the Wink API - A programmer-friendly way to manage, sell and book travel inventory on the Wink platform. The API gives you all the tools you need to ready your properties and inventory for sale across 1000s of our native sales channels.  Integrators, affiliates, travel agents and content creators have the ability search for your travel inventory and promote / sell it in a wide variety of ways.   # Integrations  We have already integrated with the most well-known channel managers so you don't have to. To see our current integrations, please go to https://extranet.wink.travel and scroll to Connectivity section. Once your properties are set up, you can finish the setup by mapping your property to Wink using your channel manager partner portal. If your properties don't have a channel manager, you can easily manage rates and availability with this API.   # Intended Audience  Programmers are [most likely] a requirement to start integrating with Wink. Companies and organizations that would most benefit from integrating with us are new and existing travel companies that have relationships with suppliers and that need an advanced system from which to manage their travel inventory and get that same inventory out to as many eyeballs as possible at the lowest price possible.  - Hotel chains  - Hotel brands  - Travel tech companies  - Destination sites  - Integrators  - Aggregators  - Destination management companies  - Travel agencies  - OTAs   ## APIs  Not every integrator needs every API. For that reason, we have separated APIs into context.  ### Common APIs  - [Analytics](/analytics): All APIs related to tracking metrics across a wide variety of data source segments including, more entertaining, leaderboard metrics. - [Channel manager](/channel-manager): The Channel Manager API enables external channel manager partners to map, exchange rate / availability information with us as well as be informed of bookings that occur on the Wink platform for one of their properties. - [Managing Entity](/managing-entity): Endpoints that quickly show you which entities you have access to. - [Notifications](/notifications): The Notifications API is a way for us to stay in touch with your user, property or affiliate account. - [Payment](/payment): All APIs related to TripPay account management, booking, mapping and integration features. - [Ping](/ping): The Ping API is a quick test endpoint to verify that your credentials work. - [Reference](/reference): All APIs related to retrieving platform-supported taxonomies. - [User Settings](/user-settings): The User Settings API exposes endpoints to allow 3rd party integrators to communicate with Wink.  ### Consumer APIs  Consume endpoints are for developers who want to find existing travel inventory and either book it or use it to advertise through one of their Wink affiliate accounts.   - [Configuration](/customization-client): A single endpoint to retrieve whitelabel + customization information for the booking customization.  - [Lookup](/lookup): All APIs related to locating inventory by region, locale and property flags.  - [Inventory](/inventory): All APIs related to retrieve known travel inventory as it was found using the Lookup API..  - [Booking](/booking): All APIs related to creating bookings on the platform.  - [Travel Agent](/travel-agent): The Travel Agent API exposes endpoints to manage agent-facilitated bookings.  ### Supplier APIs  Produce endpoints are for developers who want to create and manage travel inventory.  #### Property  - [Property Registration](/extranet/property/register): As a producer, this is, oftentimes, where you start your journey. These endpoints let you create properties on Wink. - [Property](/extranet/property): This collection of property endpoints are mostly management endpoints that let you display, change status and similar for your existing properties. - [Facilities](/extranet/facilities): This collection of endpoints let you manage facilities; such as room types. - [Experiences](/extranet/experiences): This collection of endpoints let you manage experiences, such as activities. - [Monetize](/extranet/monetize): The Monetize API exposes endpoints for managing cancellation polies, rate plans, promotions and more on Wink. - [Distribution](/extranet/distribution): The Distribution API exposes endpoints for sales channels, connecting with affiliates, managing rates and inventory calendars and more on Wink. - [Property Booking](/extranet/booking): The Property Booking API exposes endpoints for managing bookings and reviews at the property-level.  #### Affiliate  - [Affiliate](/affiliate): This collection of affiliate endpoints are mostly management endpoints that let you display, change status and similar for your existing accounts. - [Browse](/affiliate/browse): The Browse API exposes endpoints for affiliates to find suppliers and inventory to sell. - [Inventory](/affiliate/inventory): The Inventory API exposes endpoints for affiliates to manage the inventory they want to sell and how they want to sell it. - [Sales Channel](/affiliate/sales-channel): The Sales Channel API exposes endpoints for affiliates to manage existing sales channels as well as find new ones. - [WinkLinks](/affiliate/winklinks): The WinkLinks API exposes endpoints for affiliates to manage their WinkLinks page.  ## SDKs  We are actively working on supporting the most used languages out there. If you don't see your language here, reach out to us with a request to officially add your language. In the meantime, if you want to roll your own SDK, you can do so by downloading the OpenAPI spec and using one of the many available OpenAPI generators available: [https://openapi-generator.tech/docs/generators](https://openapi-generator.tech/docs/generators).  ### Inventory   - Java SDK [https://github.com/wink-travel/wink-sdk-java](https://github.com/wink-travel/wink-sdk-java)  - Python SDK [https://github.com/wink-travel/wink-sdk-python](https://github.com/wink-travel/wink-sdk-python)  ### Payment  - Java SDK [https://github.com/wink-travel/trip-pay-sdk-java](https://github.com/wink-travel/trip-pay-sdk-java) - Python SDK [https://github.com/wink-travel/trip-pay-sdk-python](https://github.com/wink-travel/trip-pay-sdk-python)  ## Usage  These features are made available to you via a [REST API](https://en.wikipedia.org/wiki/Representational_state_transfer). This API is language agnostic.  ## Versioning  We chose to version our endpoints in a way that we hope affects your integration minimally. You request the version of our API you wish to work with via the `Wink-Version` header. When it's time for you to upgrade, you only have to change the version number to get access to our updated endpoints.  Current version: `2.0` Prior versions: None  
 
-    The version of the OpenAPI document: 30.30.3
+    The version of the OpenAPI document: 30.31.0
     Contact: bjorn@wink.travel
     Generated by OpenAPI Generator (https://openapi-generator.tech)
 
@@ -22,49 +22,55 @@ from datetime import date, datetime
 from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from trip_pay_payment.models.address import Address
+from uuid import UUID
+from trip_pay_payment.models.account_status_entry import AccountStatusEntry
 from trip_pay_payment.models.bank_account import BankAccount
-from trip_pay_payment.models.contact import Contact
+from trip_pay_payment.models.geo_name_lightweight import GeoNameLightweight
+from trip_pay_payment.models.integrator import Integrator
+from trip_pay_payment.models.managed_by_entity import ManagedByEntity
+from trip_pay_payment.models.managing_entity_manager import ManagingEntityManager
+from trip_pay_payment.models.simple_address import SimpleAddress
+from trip_pay_payment.models.simple_multimedia import SimpleMultimedia
 from typing import Optional, Set
 from typing_extensions import Self
 
 class Account(BaseModel):
     """
-    Account holds KYC, bank account and contact information of an affiliate, supplier, user or any type of entity that is to be a beneficiary of funds through the payment.
+    Account holds KYC, bank account and contact information of an affiliate, supplier, user or any accountType of entity that is to be a beneficiary of funds through the payment.
     """ # noqa: E501
     id: Optional[StrictStr] = Field(default=None, description="Document UUID")
     created_date: Optional[datetime] = Field(default=None, description="Datetime this record was first created", alias="createdDate")
     last_update: Optional[datetime] = Field(default=None, description="Datetime this record was last updated", alias="lastUpdate")
     version: Optional[StrictInt] = Field(default=None, description="Version property that shows how many times this document has been persisted. Document will not persist if the version property is less than current version property in the system. Result in an optimistic locking exception.")
-    type: StrictStr = Field(description="Type of account tells us what the account is capable of.")
-    owner_type: StrictStr = Field(description="Type of account owner tells us whether ths account is managed by a company or an individual.", alias="ownerType")
-    account_owner_identifier: Annotated[str, Field(min_length=1, strict=True)] = Field(description="The entity that created this account.", alias="accountOwnerIdentifier")
+    user_identifier: UUID = Field(description="User owner ID.", alias="userIdentifier")
+    managing_entity_identifier: UUID = Field(description="Parent ID. Because it's all 1-1, it should be the same ID.", alias="managingEntityIdentifier")
+    owner_identifier: Annotated[str, Field(min_length=1, strict=True)] = Field(description="The App owner that created this record.", alias="ownerIdentifier")
+    managers: List[ManagingEntityManager]
+    managed_by: Optional[ManagedByEntity] = Field(default=None, description="If another company entity is managing this property, on behalf of the property, it can be specified here and the managing entity would be applicable a management fee on every booking.", alias="managedBy")
+    owner_type: StrictStr = Field(description="Type of entity this is.", alias="ownerType")
+    type: StrictStr = Field(description="Type of sales channel")
+    account_type: StrictStr = Field(description="Type of account tells us what the account is capable of.", alias="accountType")
     name: Annotated[str, Field(min_length=1, strict=True)] = Field(description="Name of company / full name of person")
+    url_name: Optional[StrictStr] = Field(default=None, description="Url slug of company name", alias="urlName")
+    unique_id: Optional[StrictStr] = Field(default=None, description="Event shorter name", alias="uniqueId")
     legal_name: Optional[StrictStr] = Field(default=None, description="Legal name of entity if other than name", alias="legalName")
-    user_identifier: Annotated[str, Field(min_length=1, strict=True)] = Field(description="The authenticated user that owns this account.", alias="userIdentifier")
-    owner: Contact = Field(description="The owning user entity.")
     account_email: Annotated[str, Field(min_length=1, strict=True)] = Field(description="Account email is where we will send KYC documents and other account specific mailings", alias="accountEmail")
-    account_phone_number: Optional[StrictStr] = Field(default=None, description="Account phone number is mostly used for KYC purchases", alias="accountPhoneNumber")
-    description: StrictStr = Field(description="Short company / person description.")
-    url: StrictStr = Field(description="AffiliateAccount website. If private person with no personal website, link to main social network account.")
+    account_phone_number: Annotated[str, Field(min_length=1, strict=True)] = Field(description="Account phone number is mostly used for KYC purchases", alias="accountPhoneNumber")
+    description: Annotated[str, Field(min_length=1, strict=True)] = Field(description="Short company / person description.")
+    url: Annotated[str, Field(min_length=1, strict=True)] = Field(description="AffiliateAccount website. If private person with no personal website, link to main social network account.")
+    profile_picture: Optional[SimpleMultimedia] = Field(default=None, description="Customize account with a custom profile picture.", alias="profilePicture")
     status: StrictStr = Field(description="Account status shows if it's approved")
     currency_code: Annotated[str, Field(min_length=3, strict=True, max_length=3)] = Field(description="Account's main currency.", alias="currencyCode")
-    address: Address = Field(description="Account address. Usually the business address")
-    acquirers: Optional[List[Any]] = None
+    city: GeoNameLightweight = Field(description="City location")
+    address: Optional[SimpleAddress] = None
+    acquirers: Optional[List[Integrator]] = None
     bank_accounts: Optional[List[BankAccount]] = Field(default=None, alias="bankAccounts")
     owner_type_identifier: Optional[StrictStr] = Field(default=None, description="This is the tax identification number (TIN) for individuals and entity identification number (EIN) for companies.", alias="ownerTypeIdentifier")
     dob: Optional[date] = Field(default=None, description="This is the individual's date of birth.")
-    tasks: Optional[List[Any]] = None
+    tasks: Optional[List[AccountStatusEntry]] = None
     preferred_disbursement_type: Optional[StrictStr] = Field(default='BANK_TRANSFER', description="The preferred method which the account holder wishes to be paid. This will play a role if we choose to automate the payout flow.", alias="preferredDisbursementType")
     vat_id: Optional[StrictStr] = Field(default=None, description="An optional VAT ID", alias="vatID")
-    __properties: ClassVar[List[str]] = ["id", "createdDate", "lastUpdate", "version", "type", "ownerType", "accountOwnerIdentifier", "name", "legalName", "userIdentifier", "owner", "accountEmail", "accountPhoneNumber", "description", "url", "status", "currencyCode", "address", "acquirers", "bankAccounts", "ownerTypeIdentifier", "dob", "tasks", "preferredDisbursementType", "vatID"]
-
-    @field_validator('type')
-    def type_validate_enum(cls, value):
-        """Validates the enum"""
-        if value not in set(['MERCHANT', 'AFFILIATE', 'AGENT', 'FACILITATOR', 'RATE_PROVIDER', 'TRIP_PAY']):
-            raise ValueError("must be one of enum values ('MERCHANT', 'AFFILIATE', 'AGENT', 'FACILITATOR', 'RATE_PROVIDER', 'TRIP_PAY')")
-        return value
+    __properties: ClassVar[List[str]] = ["id", "createdDate", "lastUpdate", "version", "userIdentifier", "managingEntityIdentifier", "ownerIdentifier", "managers", "managedBy", "ownerType", "type", "accountType", "name", "urlName", "uniqueId", "legalName", "accountEmail", "accountPhoneNumber", "description", "url", "profilePicture", "status", "currencyCode", "city", "address", "acquirers", "bankAccounts", "ownerTypeIdentifier", "dob", "tasks", "preferredDisbursementType", "vatID"]
 
     @field_validator('owner_type')
     def owner_type_validate_enum(cls, value):
@@ -73,11 +79,25 @@ class Account(BaseModel):
             raise ValueError("must be one of enum values ('COMPANY', 'INDIVIDUAL')")
         return value
 
+    @field_validator('type')
+    def type_validate_enum(cls, value):
+        """Validates the enum"""
+        if value not in set(['TRIP_PAY', 'FACILITATOR', 'DIRECT', 'APPLICATION', 'HOTEL', 'TRAVELIKO', 'CORPORATE', 'TRAVEL_AGENT', 'INFLUENCER', 'BLOGGER', 'DESTINATION', 'CHANNEL_MANAGER', 'PROPERTY_MANAGEMENT_SYSTEM', 'CENTRAL_RESERVATION_SYSTEM', 'GOOGLE_HOTEL_API', 'MANAGEMENT_COMPANY', 'CHAIN', 'BRAND', 'EVENT_ORGANIZER', 'OTHER']):
+            raise ValueError("must be one of enum values ('TRIP_PAY', 'FACILITATOR', 'DIRECT', 'APPLICATION', 'HOTEL', 'TRAVELIKO', 'CORPORATE', 'TRAVEL_AGENT', 'INFLUENCER', 'BLOGGER', 'DESTINATION', 'CHANNEL_MANAGER', 'PROPERTY_MANAGEMENT_SYSTEM', 'CENTRAL_RESERVATION_SYSTEM', 'GOOGLE_HOTEL_API', 'MANAGEMENT_COMPANY', 'CHAIN', 'BRAND', 'EVENT_ORGANIZER', 'OTHER')")
+        return value
+
+    @field_validator('account_type')
+    def account_type_validate_enum(cls, value):
+        """Validates the enum"""
+        if value not in set(['MERCHANT', 'AFFILIATE', 'AGENT', 'FACILITATOR', 'RATE_PROVIDER', 'TRIP_PAY']):
+            raise ValueError("must be one of enum values ('MERCHANT', 'AFFILIATE', 'AGENT', 'FACILITATOR', 'RATE_PROVIDER', 'TRIP_PAY')")
+        return value
+
     @field_validator('status')
     def status_validate_enum(cls, value):
         """Validates the enum"""
-        if value not in set(['REGISTERED', 'REVIEW', 'APPROVED', 'DEACTIVATED', 'REJECTED']):
-            raise ValueError("must be one of enum values ('REGISTERED', 'REVIEW', 'APPROVED', 'DEACTIVATED', 'REJECTED')")
+        if value not in set(['PENDING_APPROVAL', 'ACTIVE', 'INACTIVE', 'UNDER_REVIEW', 'SUSPENDED', 'REJECTED', 'REMOVED']):
+            raise ValueError("must be one of enum values ('PENDING_APPROVAL', 'ACTIVE', 'INACTIVE', 'UNDER_REVIEW', 'SUSPENDED', 'REJECTED', 'REMOVED')")
         return value
 
     @field_validator('preferred_disbursement_type')
@@ -129,12 +149,32 @@ class Account(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of owner
-        if self.owner:
-            _dict['owner'] = self.owner.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of each item in managers (list)
+        _items = []
+        if self.managers:
+            for _item_managers in self.managers:
+                if _item_managers:
+                    _items.append(_item_managers.to_dict())
+            _dict['managers'] = _items
+        # override the default output from pydantic by calling `to_dict()` of managed_by
+        if self.managed_by:
+            _dict['managedBy'] = self.managed_by.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of profile_picture
+        if self.profile_picture:
+            _dict['profilePicture'] = self.profile_picture.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of city
+        if self.city:
+            _dict['city'] = self.city.to_dict()
         # override the default output from pydantic by calling `to_dict()` of address
         if self.address:
             _dict['address'] = self.address.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of each item in acquirers (list)
+        _items = []
+        if self.acquirers:
+            for _item_acquirers in self.acquirers:
+                if _item_acquirers:
+                    _items.append(_item_acquirers.to_dict())
+            _dict['acquirers'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in bank_accounts (list)
         _items = []
         if self.bank_accounts:
@@ -142,6 +182,13 @@ class Account(BaseModel):
                 if _item_bank_accounts:
                     _items.append(_item_bank_accounts.to_dict())
             _dict['bankAccounts'] = _items
+        # override the default output from pydantic by calling `to_dict()` of each item in tasks (list)
+        _items = []
+        if self.tasks:
+            for _item_tasks in self.tasks:
+                if _item_tasks:
+                    _items.append(_item_tasks.to_dict())
+            _dict['tasks'] = _items
         return _dict
 
     @classmethod
@@ -158,25 +205,32 @@ class Account(BaseModel):
             "createdDate": obj.get("createdDate"),
             "lastUpdate": obj.get("lastUpdate"),
             "version": obj.get("version"),
-            "type": obj.get("type"),
-            "ownerType": obj.get("ownerType"),
-            "accountOwnerIdentifier": obj.get("accountOwnerIdentifier"),
-            "name": obj.get("name"),
-            "legalName": obj.get("legalName"),
             "userIdentifier": obj.get("userIdentifier"),
-            "owner": Contact.from_dict(obj["owner"]) if obj.get("owner") is not None else None,
+            "managingEntityIdentifier": obj.get("managingEntityIdentifier"),
+            "ownerIdentifier": obj.get("ownerIdentifier"),
+            "managers": [ManagingEntityManager.from_dict(_item) for _item in obj["managers"]] if obj.get("managers") is not None else None,
+            "managedBy": ManagedByEntity.from_dict(obj["managedBy"]) if obj.get("managedBy") is not None else None,
+            "ownerType": obj.get("ownerType"),
+            "type": obj.get("type"),
+            "accountType": obj.get("accountType"),
+            "name": obj.get("name"),
+            "urlName": obj.get("urlName"),
+            "uniqueId": obj.get("uniqueId"),
+            "legalName": obj.get("legalName"),
             "accountEmail": obj.get("accountEmail"),
             "accountPhoneNumber": obj.get("accountPhoneNumber"),
             "description": obj.get("description"),
             "url": obj.get("url"),
-            "status": obj.get("status") if obj.get("status") is not None else 'REGISTERED',
+            "profilePicture": SimpleMultimedia.from_dict(obj["profilePicture"]) if obj.get("profilePicture") is not None else None,
+            "status": obj.get("status"),
             "currencyCode": obj.get("currencyCode"),
-            "address": Address.from_dict(obj["address"]) if obj.get("address") is not None else None,
-            "acquirers": obj.get("acquirers"),
+            "city": GeoNameLightweight.from_dict(obj["city"]) if obj.get("city") is not None else None,
+            "address": SimpleAddress.from_dict(obj["address"]) if obj.get("address") is not None else None,
+            "acquirers": [Integrator.from_dict(_item) for _item in obj["acquirers"]] if obj.get("acquirers") is not None else None,
             "bankAccounts": [BankAccount.from_dict(_item) for _item in obj["bankAccounts"]] if obj.get("bankAccounts") is not None else None,
             "ownerTypeIdentifier": obj.get("ownerTypeIdentifier"),
             "dob": obj.get("dob"),
-            "tasks": obj.get("tasks"),
+            "tasks": [AccountStatusEntry.from_dict(_item) for _item in obj["tasks"]] if obj.get("tasks") is not None else None,
             "preferredDisbursementType": obj.get("preferredDisbursementType") if obj.get("preferredDisbursementType") is not None else 'BANK_TRANSFER',
             "vatID": obj.get("vatID")
         })

@@ -7,7 +7,7 @@ Request for affiliate details
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **type** | **str** | Account identifier type | 
-**identifier** | **str** | Account identifier | 
+**identifier** | **UUID** | Account identifier | 
 
 ## Example
 

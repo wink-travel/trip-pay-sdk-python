@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **agent_invoiced_date** | **datetime** | The date/time the invoice was generated | [optional] 
 **agent_invoice_identifier** | **str** | The specific invoice this booking was registered on | [optional] 
 **redirect_url** | **str** | Where to redirect to after payment [in-]complete | [optional] 
-**fees** | **List[object]** |  | [optional] 
+**fees** | [**List[Fee]**](Fee.md) |  | [optional] 
 **vendor_specific** | **Dict[str, str]** | Vendor specific values that are returned in a successful response | 
 
 ## Example

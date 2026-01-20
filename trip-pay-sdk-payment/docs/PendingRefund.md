@@ -1,6 +1,5 @@
 # PendingRefund
 
-When a refund is first requested, it ends up here. Once it is applied, it moves out of this list and into the parent modifier property
 
 ## Properties
 

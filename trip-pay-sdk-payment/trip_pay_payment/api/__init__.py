@@ -2,6 +2,7 @@
 
 # import apis into api package
 from trip_pay_payment.api.account_api import AccountApi
+from trip_pay_payment.api.account_manager_api import AccountManagerApi
 from trip_pay_payment.api.account_mappings_api import AccountMappingsApi
 from trip_pay_payment.api.affiliate_api import AffiliateApi
 from trip_pay_payment.api.agent_api import AgentApi

@@ -9,13 +9,13 @@ Name | Type | Description | Notes
 **vendor** | **str** | Name of integration vendor | 
 **vendor_identifier** | **str** | Which acquirer account we return fund from. | 
 **vendor_name** | **str** | Name of regional acquirer account. | 
-**ledger_identifier** | **str** | Unique system ID. | 
-**beneficiary_identifier** | **str** | Beneficiary ID. | 
+**ledger_identifier** | **UUID** | Unique system ID. | 
+**beneficiary_identifier** | **UUID** | Beneficiary ID. | 
 **external_payee_identifier** | **str** | This would be the Wise recipient ID. | 
 **type** | **str** | Type of withdrawal. | 
 **entry** | [**CustomMonetaryAmount**](CustomMonetaryAmount.md) |  | 
 **fees** | [**List[PayoutFee]**](PayoutFee.md) | Fees incurred when making the withdrawal. | [optional] 
-**quote** | [**Quote**](Quote.md) |  | [optional] 
+**quote** | [**QuoteLightweight**](QuoteLightweight.md) | FX quote for this transfer. | [optional] 
 **created** | **datetime** | When the payout record was created. | 
 **description** | **str** | Textual response from provider | [optional] 
 **payout_id** | **str** | The ledgerIdentifier that was generated when scheduling the payout. This will come from the payout provider such as Stripe. | [optional] 

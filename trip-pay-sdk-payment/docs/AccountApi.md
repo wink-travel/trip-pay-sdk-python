@@ -6,7 +6,6 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**check_account_status**](AccountApi.md#check_account_status) | **GET** /api/account/{id}/status | Check Account Status
 [**check_external_account_status**](AccountApi.md#check_external_account_status) | **GET** /api/account/external/{id}/status | Check External Account Status
-[**create_account**](AccountApi.md#create_account) | **POST** /api/account | Create Account
 [**create_account_bank_account**](AccountApi.md#create_account_bank_account) | **POST** /api/account/{id}/bank-account | Add Bank Account
 [**create_external_account_bank_account**](AccountApi.md#create_external_account_bank_account) | **POST** /api/account/external/{id}/bank-account | Add Bank Account to External
 [**delete_account**](AccountApi.md#delete_account) | **DELETE** /api/account/{id} | Delete Account
@@ -64,7 +63,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = trip_pay_payment.AccountApi(api_client)
     id = 'id_example' # str | 
-    wink_version = 'wink_version_example' # str |  (optional)
+    wink_version = 2.0.0 # str |  (optional) (default to 2.0.0)
     accept = 'accept_example' # str |  (optional)
 
     try:
@@ -84,7 +83,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**|  | 
- **wink_version** | **str**|  | [optional] 
+ **wink_version** | **str**|  | [optional] [default to 2.0.0]
  **accept** | **str**|  | [optional] 
 
 ### Return type
@@ -143,7 +142,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = trip_pay_payment.AccountApi(api_client)
     id = 'id_example' # str | 
-    wink_version = 'wink_version_example' # str |  (optional)
+    wink_version = 2.0.0 # str |  (optional) (default to 2.0.0)
     accept = 'accept_example' # str |  (optional)
 
     try:
@@ -163,7 +162,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**|  | 
- **wink_version** | **str**|  | [optional] 
+ **wink_version** | **str**|  | [optional] [default to 2.0.0]
  **accept** | **str**|  | [optional] 
 
 ### Return type
@@ -184,84 +183,6 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **create_account**
-> Account create_account(create_account_request, wink_version=wink_version)
-
-Create Account
-
-Create a new account
-
-### Example
-
-* OAuth Authentication (oauth2ClientCredentials):
-
-```python
-import trip_pay_payment
-from trip_pay_payment.models.account import Account
-from trip_pay_payment.models.create_account_request import CreateAccountRequest
-from trip_pay_payment.rest import ApiException
-from pprint import pprint
-
-# Defining the host is optional and defaults to https://api.trippay.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = trip_pay_payment.Configuration(
-    host = "https://api.trippay.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-configuration.access_token = os.environ["ACCESS_TOKEN"]
-
-# Enter a context with an instance of the API client
-with trip_pay_payment.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = trip_pay_payment.AccountApi(api_client)
-    create_account_request = trip_pay_payment.CreateAccountRequest() # CreateAccountRequest | 
-    wink_version = 'wink_version_example' # str |  (optional)
-
-    try:
-        # Create Account
-        api_response = api_instance.create_account(create_account_request, wink_version=wink_version)
-        print("The response of AccountApi->create_account:\n")
-        pprint(api_response)
-    except Exception as e:
-        print("Exception when calling AccountApi->create_account: %s\n" % e)
-```
-
-
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **create_account_request** | [**CreateAccountRequest**](CreateAccountRequest.md)|  | 
- **wink_version** | **str**|  | [optional] 
-
-### Return type
-
-[**Account**](Account.md)
-
-### Authorization
-
-[oauth2ClientCredentials](../README.md#oauth2ClientCredentials)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-### HTTP response details
-
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**201** | Created |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -302,7 +223,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
     api_instance = trip_pay_payment.AccountApi(api_client)
     id = 'id_example' # str | 
     upsert_bank_account_request = trip_pay_payment.UpsertBankAccountRequest() # UpsertBankAccountRequest | 
-    wink_version = 'wink_version_example' # str |  (optional)
+    wink_version = 2.0.0 # str |  (optional) (default to 2.0.0)
 
     try:
         # Add Bank Account
@@ -322,7 +243,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**|  | 
  **upsert_bank_account_request** | [**UpsertBankAccountRequest**](UpsertBankAccountRequest.md)|  | 
- **wink_version** | **str**|  | [optional] 
+ **wink_version** | **str**|  | [optional] [default to 2.0.0]
 
 ### Return type
 
@@ -382,7 +303,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
     api_instance = trip_pay_payment.AccountApi(api_client)
     id = 'id_example' # str | 
     upsert_bank_account_request = trip_pay_payment.UpsertBankAccountRequest() # UpsertBankAccountRequest | 
-    wink_version = 'wink_version_example' # str |  (optional)
+    wink_version = 2.0.0 # str |  (optional) (default to 2.0.0)
 
     try:
         # Add Bank Account to External
@@ -402,7 +323,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**|  | 
  **upsert_bank_account_request** | [**UpsertBankAccountRequest**](UpsertBankAccountRequest.md)|  | 
- **wink_version** | **str**|  | [optional] 
+ **wink_version** | **str**|  | [optional] [default to 2.0.0]
 
 ### Return type
 
@@ -460,7 +381,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = trip_pay_payment.AccountApi(api_client)
     id = 'id_example' # str | 
-    wink_version = 'wink_version_example' # str |  (optional)
+    wink_version = 2.0.0 # str |  (optional) (default to 2.0.0)
     accept = 'accept_example' # str |  (optional)
 
     try:
@@ -480,7 +401,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**|  | 
- **wink_version** | **str**|  | [optional] 
+ **wink_version** | **str**|  | [optional] [default to 2.0.0]
  **accept** | **str**|  | [optional] 
 
 ### Return type
@@ -540,7 +461,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
     api_instance = trip_pay_payment.AccountApi(api_client)
     name = 'name_example' # str | 
     identifier = 'identifier_example' # str |  (optional)
-    wink_version = 'wink_version_example' # str |  (optional)
+    wink_version = 2.0.0 # str |  (optional) (default to 2.0.0)
     accept = 'accept_example' # str |  (optional)
 
     try:
@@ -561,7 +482,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**|  | 
  **identifier** | **str**|  | [optional] 
- **wink_version** | **str**|  | [optional] 
+ **wink_version** | **str**|  | [optional] [default to 2.0.0]
  **accept** | **str**|  | [optional] 
 
 ### Return type
@@ -620,7 +541,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = trip_pay_payment.AccountApi(api_client)
     id = 'id_example' # str | 
-    wink_version = 'wink_version_example' # str |  (optional)
+    wink_version = 2.0.0 # str |  (optional) (default to 2.0.0)
     accept = 'accept_example' # str |  (optional)
 
     try:
@@ -640,7 +561,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**|  | 
- **wink_version** | **str**|  | [optional] 
+ **wink_version** | **str**|  | [optional] [default to 2.0.0]
  **accept** | **str**|  | [optional] 
 
 ### Return type
@@ -699,7 +620,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = trip_pay_payment.AccountApi(api_client)
     name = 'name_example' # str | 
-    wink_version = 'wink_version_example' # str |  (optional)
+    wink_version = 2.0.0 # str |  (optional) (default to 2.0.0)
     accept = 'accept_example' # str |  (optional)
 
     try:
@@ -719,7 +640,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**|  | 
- **wink_version** | **str**|  | [optional] 
+ **wink_version** | **str**|  | [optional] [default to 2.0.0]
  **accept** | **str**|  | [optional] 
 
 ### Return type
@@ -779,7 +700,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
     api_instance = trip_pay_payment.AccountApi(api_client)
     name = 'name_example' # str | 
     ignore_case = True # bool |  (optional) (default to True)
-    wink_version = 'wink_version_example' # str |  (optional)
+    wink_version = 2.0.0 # str |  (optional) (default to 2.0.0)
     accept = 'accept_example' # str |  (optional)
 
     try:
@@ -800,7 +721,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**|  | 
  **ignore_case** | **bool**|  | [optional] [default to True]
- **wink_version** | **str**|  | [optional] 
+ **wink_version** | **str**|  | [optional] [default to 2.0.0]
  **accept** | **str**|  | [optional] 
 
 ### Return type
@@ -860,7 +781,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = trip_pay_payment.AccountApi(api_client)
     state = trip_pay_payment.State() # State | 
-    wink_version = 'wink_version_example' # str |  (optional)
+    wink_version = 2.0.0 # str |  (optional) (default to 2.0.0)
 
     try:
         # Show Account Grid for User
@@ -879,7 +800,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **state** | [**State**](State.md)|  | 
- **wink_version** | **str**|  | [optional] 
+ **wink_version** | **str**|  | [optional] [default to 2.0.0]
 
 ### Return type
 
@@ -936,7 +857,7 @@ configuration.access_token = os.environ["ACCESS_TOKEN"]
 with trip_pay_payment.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = trip_pay_payment.AccountApi(api_client)
-    wink_version = 'wink_version_example' # str |  (optional)
+    wink_version = 2.0.0 # str |  (optional) (default to 2.0.0)
     accept = 'accept_example' # str |  (optional)
 
     try:
@@ -955,7 +876,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **wink_version** | **str**|  | [optional] 
+ **wink_version** | **str**|  | [optional] [default to 2.0.0]
  **accept** | **str**|  | [optional] 
 
 ### Return type
@@ -1014,7 +935,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = trip_pay_payment.AccountApi(api_client)
     external_account_identifier = 'external_account_identifier_example' # str | 
-    wink_version = 'wink_version_example' # str |  (optional)
+    wink_version = 2.0.0 # str |  (optional) (default to 2.0.0)
     accept = 'accept_example' # str |  (optional)
 
     try:
@@ -1034,7 +955,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **external_account_identifier** | **str**|  | 
- **wink_version** | **str**|  | [optional] 
+ **wink_version** | **str**|  | [optional] [default to 2.0.0]
  **accept** | **str**|  | [optional] 
 
 ### Return type
@@ -1094,7 +1015,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
     api_instance = trip_pay_payment.AccountApi(api_client)
     id = 'id_example' # str | 
     bank_account_id = 'bank_account_id_example' # str | 
-    wink_version = 'wink_version_example' # str |  (optional)
+    wink_version = 2.0.0 # str |  (optional) (default to 2.0.0)
     accept = 'accept_example' # str |  (optional)
 
     try:
@@ -1115,7 +1036,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**|  | 
  **bank_account_id** | **str**|  | 
- **wink_version** | **str**|  | [optional] 
+ **wink_version** | **str**|  | [optional] [default to 2.0.0]
  **accept** | **str**|  | [optional] 
 
 ### Return type
@@ -1175,7 +1096,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
     api_instance = trip_pay_payment.AccountApi(api_client)
     id = 'id_example' # str | 
     bank_account_id = 'bank_account_id_example' # str | 
-    wink_version = 'wink_version_example' # str |  (optional)
+    wink_version = 2.0.0 # str |  (optional) (default to 2.0.0)
     accept = 'accept_example' # str |  (optional)
 
     try:
@@ -1196,7 +1117,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**|  | 
  **bank_account_id** | **str**|  | 
- **wink_version** | **str**|  | [optional] 
+ **wink_version** | **str**|  | [optional] [default to 2.0.0]
  **accept** | **str**|  | [optional] 
 
 ### Return type
@@ -1256,7 +1177,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
     api_instance = trip_pay_payment.AccountApi(api_client)
     name = 'name_example' # str | 
     ignorecase = False # bool |  (optional) (default to False)
-    wink_version = 'wink_version_example' # str |  (optional)
+    wink_version = 2.0.0 # str |  (optional) (default to 2.0.0)
     accept = 'accept_example' # str |  (optional)
 
     try:
@@ -1277,7 +1198,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**|  | 
  **ignorecase** | **bool**|  | [optional] [default to False]
- **wink_version** | **str**|  | [optional] 
+ **wink_version** | **str**|  | [optional] [default to 2.0.0]
  **accept** | **str**|  | [optional] 
 
 ### Return type
@@ -1335,7 +1256,7 @@ configuration.access_token = os.environ["ACCESS_TOKEN"]
 with trip_pay_payment.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = trip_pay_payment.AccountApi(api_client)
-    wink_version = 'wink_version_example' # str |  (optional)
+    wink_version = 2.0.0 # str |  (optional) (default to 2.0.0)
     accept = 'accept_example' # str |  (optional)
 
     try:
@@ -1354,7 +1275,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **wink_version** | **str**|  | [optional] 
+ **wink_version** | **str**|  | [optional] [default to 2.0.0]
  **accept** | **str**|  | [optional] 
 
 ### Return type
@@ -1415,7 +1336,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
     api_instance = trip_pay_payment.AccountApi(api_client)
     id = 'id_example' # str | 
     upsert_account_request = trip_pay_payment.UpsertAccountRequest() # UpsertAccountRequest | 
-    wink_version = 'wink_version_example' # str |  (optional)
+    wink_version = 2.0.0 # str |  (optional) (default to 2.0.0)
 
     try:
         # Update Account
@@ -1435,7 +1356,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**|  | 
  **upsert_account_request** | [**UpsertAccountRequest**](UpsertAccountRequest.md)|  | 
- **wink_version** | **str**|  | [optional] 
+ **wink_version** | **str**|  | [optional] [default to 2.0.0]
 
 ### Return type
 
@@ -1495,7 +1416,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
     api_instance = trip_pay_payment.AccountApi(api_client)
     id = 'id_example' # str | 
     upsert_account_request = trip_pay_payment.UpsertAccountRequest() # UpsertAccountRequest | 
-    wink_version = 'wink_version_example' # str |  (optional)
+    wink_version = 2.0.0 # str |  (optional) (default to 2.0.0)
 
     try:
         # Update External Account
@@ -1515,7 +1436,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**|  | 
  **upsert_account_request** | [**UpsertAccountRequest**](UpsertAccountRequest.md)|  | 
- **wink_version** | **str**|  | [optional] 
+ **wink_version** | **str**|  | [optional] [default to 2.0.0]
 
 ### Return type
 
@@ -1576,7 +1497,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
     id = 'id_example' # str | 
     task_id = 'task_id_example' # str | 
     set_tax_identifier_request = trip_pay_payment.SetTaxIdentifierRequest() # SetTaxIdentifierRequest | 
-    wink_version = 'wink_version_example' # str |  (optional)
+    wink_version = 2.0.0 # str |  (optional) (default to 2.0.0)
 
     try:
         # Submit Tax ID
@@ -1597,7 +1518,7 @@ Name | Type | Description  | Notes
  **id** | **str**|  | 
  **task_id** | **str**|  | 
  **set_tax_identifier_request** | [**SetTaxIdentifierRequest**](SetTaxIdentifierRequest.md)|  | 
- **wink_version** | **str**|  | [optional] 
+ **wink_version** | **str**|  | [optional] [default to 2.0.0]
 
 ### Return type
 
@@ -1658,7 +1579,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
     id = 'id_example' # str | 
     bank_account_id = 'bank_account_id_example' # str | 
     upsert_bank_account_request = trip_pay_payment.UpsertBankAccountRequest() # UpsertBankAccountRequest | 
-    wink_version = 'wink_version_example' # str |  (optional)
+    wink_version = 2.0.0 # str |  (optional) (default to 2.0.0)
 
     try:
         # Update Bank Account
@@ -1679,7 +1600,7 @@ Name | Type | Description  | Notes
  **id** | **str**|  | 
  **bank_account_id** | **str**|  | 
  **upsert_bank_account_request** | [**UpsertBankAccountRequest**](UpsertBankAccountRequest.md)|  | 
- **wink_version** | **str**|  | [optional] 
+ **wink_version** | **str**|  | [optional] [default to 2.0.0]
 
 ### Return type
 
@@ -1740,7 +1661,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
     id = 'id_example' # str | 
     bank_account_id = 'bank_account_id_example' # str | 
     upsert_bank_account_request = trip_pay_payment.UpsertBankAccountRequest() # UpsertBankAccountRequest | 
-    wink_version = 'wink_version_example' # str |  (optional)
+    wink_version = 2.0.0 # str |  (optional) (default to 2.0.0)
 
     try:
         # Update Bank Account for External
@@ -1761,7 +1682,7 @@ Name | Type | Description  | Notes
  **id** | **str**|  | 
  **bank_account_id** | **str**|  | 
  **upsert_bank_account_request** | [**UpsertBankAccountRequest**](UpsertBankAccountRequest.md)|  | 
- **wink_version** | **str**|  | [optional] 
+ **wink_version** | **str**|  | [optional] [default to 2.0.0]
 
 ### Return type
 
@@ -1821,7 +1742,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
     api_instance = trip_pay_payment.AccountApi(api_client)
     id = 'id_example' # str | 
     verify_account_request = trip_pay_payment.VerifyAccountRequest() # VerifyAccountRequest | 
-    wink_version = 'wink_version_example' # str |  (optional)
+    wink_version = 2.0.0 # str |  (optional) (default to 2.0.0)
 
     try:
         # Verify Account
@@ -1841,7 +1762,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**|  | 
  **verify_account_request** | [**VerifyAccountRequest**](VerifyAccountRequest.md)|  | 
- **wink_version** | **str**|  | [optional] 
+ **wink_version** | **str**|  | [optional] [default to 2.0.0]
 
 ### Return type
 

@@ -48,7 +48,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = trip_pay_payment.WebhookApi(api_client)
     upsert_webhook_request = trip_pay_payment.UpsertWebhookRequest() # UpsertWebhookRequest | 
-    wink_version = 'wink_version_example' # str |  (optional)
+    wink_version = 2.0.0 # str |  (optional) (default to 2.0.0)
 
     try:
         # Create Webhook
@@ -67,7 +67,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **upsert_webhook_request** | [**UpsertWebhookRequest**](UpsertWebhookRequest.md)|  | 
- **wink_version** | **str**|  | [optional] 
+ **wink_version** | **str**|  | [optional] [default to 2.0.0]
 
 ### Return type
 
@@ -125,7 +125,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = trip_pay_payment.WebhookApi(api_client)
     id = 'id_example' # str | 
-    wink_version = 'wink_version_example' # str |  (optional)
+    wink_version = 2.0.0 # str |  (optional) (default to 2.0.0)
     accept = 'accept_example' # str |  (optional)
 
     try:
@@ -145,7 +145,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**|  | 
- **wink_version** | **str**|  | [optional] 
+ **wink_version** | **str**|  | [optional] [default to 2.0.0]
  **accept** | **str**|  | [optional] 
 
 ### Return type
@@ -204,7 +204,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = trip_pay_payment.WebhookApi(api_client)
     id = 'id_example' # str | 
-    wink_version = 'wink_version_example' # str |  (optional)
+    wink_version = 2.0.0 # str |  (optional) (default to 2.0.0)
     accept = 'accept_example' # str |  (optional)
 
     try:
@@ -224,7 +224,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**|  | 
- **wink_version** | **str**|  | [optional] 
+ **wink_version** | **str**|  | [optional] [default to 2.0.0]
  **accept** | **str**|  | [optional] 
 
 ### Return type
@@ -282,7 +282,7 @@ configuration.access_token = os.environ["ACCESS_TOKEN"]
 with trip_pay_payment.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = trip_pay_payment.WebhookApi(api_client)
-    wink_version = 'wink_version_example' # str |  (optional)
+    wink_version = 2.0.0 # str |  (optional) (default to 2.0.0)
     accept = 'accept_example' # str |  (optional)
 
     try:
@@ -301,7 +301,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **wink_version** | **str**|  | [optional] 
+ **wink_version** | **str**|  | [optional] [default to 2.0.0]
  **accept** | **str**|  | [optional] 
 
 ### Return type
@@ -359,7 +359,7 @@ configuration.access_token = os.environ["ACCESS_TOKEN"]
 with trip_pay_payment.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = trip_pay_payment.WebhookApi(api_client)
-    wink_version = 'wink_version_example' # str |  (optional)
+    wink_version = 2.0.0 # str |  (optional) (default to 2.0.0)
     accept = 'accept_example' # str |  (optional)
 
     try:
@@ -378,7 +378,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **wink_version** | **str**|  | [optional] 
+ **wink_version** | **str**|  | [optional] [default to 2.0.0]
  **accept** | **str**|  | [optional] 
 
 ### Return type
@@ -439,7 +439,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
     api_instance = trip_pay_payment.WebhookApi(api_client)
     id = 'id_example' # str | 
     upsert_webhook_request = trip_pay_payment.UpsertWebhookRequest() # UpsertWebhookRequest | 
-    wink_version = 'wink_version_example' # str |  (optional)
+    wink_version = 2.0.0 # str |  (optional) (default to 2.0.0)
 
     try:
         # Update Webhook
@@ -459,7 +459,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**|  | 
  **upsert_webhook_request** | [**UpsertWebhookRequest**](UpsertWebhookRequest.md)|  | 
- **wink_version** | **str**|  | [optional] 
+ **wink_version** | **str**|  | [optional] [default to 2.0.0]
 
 ### Return type
 

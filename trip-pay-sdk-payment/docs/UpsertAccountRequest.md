@@ -5,14 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **str** | Name of company / full name of person | 
-**legal_name** | **str** | Legal name of entity if other than name | [optional] 
-**description** | **str** | Short company / person description. | 
-**url** | **str** | AffiliateAccount website. If private person with no personal website, link to main social network account. | 
-**account_email** | **str** | AffiliateAccount website. If private person with no personal website, link to main social network account. | 
-**account_phone_number** | **str** | Account phone number is mostly used for KYC purchases | [optional] 
-**currency_code** | **str** | Account&#39;s main currency. | 
-**address** | [**UpsertAddressRequest**](UpsertAddressRequest.md) | Account address. Usually the business address | 
+**owner_type_identifier** | **str** | Account phone number is mostly used for KYC purchases | [optional] 
+**dob** | **date** | Account&#39;s main currency. | [optional] 
 **preferred_disbursement_type** | **str** | The preferred method which the account holder wishes to be paid. This will play a role if we choose to automate the payout flow. | [optional] [default to 'BANK_TRANSFER']
 
 ## Example

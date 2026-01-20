@@ -6,9 +6,9 @@ Describes a specific issue
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**task_id** | **str** | Unique task identifier. | 
+**task_id** | **UUID** | Unique task identifier. | 
 **type** | **str** | Type of textual entry | 
-**text** | **str** | Textual description of . | 
+**text** | **UUID** | Textual description of . | 
 
 ## Example
 

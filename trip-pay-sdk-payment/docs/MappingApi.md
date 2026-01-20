@@ -50,7 +50,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = trip_pay_payment.MappingApi(api_client)
     create_mapping_request = trip_pay_payment.CreateMappingRequest() # CreateMappingRequest | 
-    wink_version = 'wink_version_example' # str |  (optional)
+    wink_version = 2.0.0 # str |  (optional) (default to 2.0.0)
 
     try:
         # Create Mapping
@@ -69,7 +69,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **create_mapping_request** | [**CreateMappingRequest**](CreateMappingRequest.md)|  | 
- **wink_version** | **str**|  | [optional] 
+ **wink_version** | **str**|  | [optional] [default to 2.0.0]
 
 ### Return type
 
@@ -127,7 +127,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = trip_pay_payment.MappingApi(api_client)
     id = 'id_example' # str | 
-    wink_version = 'wink_version_example' # str |  (optional)
+    wink_version = 2.0.0 # str |  (optional) (default to 2.0.0)
     accept = 'accept_example' # str |  (optional)
 
     try:
@@ -147,7 +147,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**|  | 
- **wink_version** | **str**|  | [optional] 
+ **wink_version** | **str**|  | [optional] [default to 2.0.0]
  **accept** | **str**|  | [optional] 
 
 ### Return type
@@ -206,7 +206,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = trip_pay_payment.MappingApi(api_client)
     id = 'id_example' # str | 
-    wink_version = 'wink_version_example' # str |  (optional)
+    wink_version = 2.0.0 # str |  (optional) (default to 2.0.0)
     accept = 'accept_example' # str |  (optional)
 
     try:
@@ -226,7 +226,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**|  | 
- **wink_version** | **str**|  | [optional] 
+ **wink_version** | **str**|  | [optional] [default to 2.0.0]
  **accept** | **str**|  | [optional] 
 
 ### Return type
@@ -284,7 +284,7 @@ configuration.access_token = os.environ["ACCESS_TOKEN"]
 with trip_pay_payment.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = trip_pay_payment.MappingApi(api_client)
-    wink_version = 'wink_version_example' # str |  (optional)
+    wink_version = 2.0.0 # str |  (optional) (default to 2.0.0)
     accept = 'accept_example' # str |  (optional)
 
     try:
@@ -303,7 +303,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **wink_version** | **str**|  | [optional] 
+ **wink_version** | **str**|  | [optional] [default to 2.0.0]
  **accept** | **str**|  | [optional] 
 
 ### Return type
@@ -362,7 +362,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = trip_pay_payment.MappingApi(api_client)
     id = 'id_example' # str | 
-    wink_version = 'wink_version_example' # str |  (optional)
+    wink_version = 2.0.0 # str |  (optional) (default to 2.0.0)
     accept = 'accept_example' # str |  (optional)
 
     try:
@@ -382,7 +382,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**|  | 
- **wink_version** | **str**|  | [optional] 
+ **wink_version** | **str**|  | [optional] [default to 2.0.0]
  **accept** | **str**|  | [optional] 
 
 ### Return type
@@ -441,7 +441,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = trip_pay_payment.MappingApi(api_client)
     id = 'id_example' # str | 
-    wink_version = 'wink_version_example' # str |  (optional)
+    wink_version = 2.0.0 # str |  (optional) (default to 2.0.0)
     accept = 'accept_example' # str |  (optional)
 
     try:
@@ -461,7 +461,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**|  | 
- **wink_version** | **str**|  | [optional] 
+ **wink_version** | **str**|  | [optional] [default to 2.0.0]
  **accept** | **str**|  | [optional] 
 
 ### Return type
@@ -522,7 +522,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
     api_instance = trip_pay_payment.MappingApi(api_client)
     id = 'id_example' # str | 
     update_mapping_request = trip_pay_payment.UpdateMappingRequest() # UpdateMappingRequest | 
-    wink_version = 'wink_version_example' # str |  (optional)
+    wink_version = 2.0.0 # str |  (optional) (default to 2.0.0)
 
     try:
         # Update Mapping
@@ -542,7 +542,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**|  | 
  **update_mapping_request** | [**UpdateMappingRequest**](UpdateMappingRequest.md)|  | 
- **wink_version** | **str**|  | [optional] 
+ **wink_version** | **str**|  | [optional] [default to 2.0.0]
 
 ### Return type
 
@@ -602,7 +602,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
     api_instance = trip_pay_payment.MappingApi(api_client)
     id = 'id_example' # str | 
     update_mapping_request = trip_pay_payment.UpdateMappingRequest() # UpdateMappingRequest | 
-    wink_version = 'wink_version_example' # str |  (optional)
+    wink_version = 2.0.0 # str |  (optional) (default to 2.0.0)
 
     try:
         # Update External Mapping
@@ -622,7 +622,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**|  | 
  **update_mapping_request** | [**UpdateMappingRequest**](UpdateMappingRequest.md)|  | 
- **wink_version** | **str**|  | [optional] 
+ **wink_version** | **str**|  | [optional] [default to 2.0.0]
 
 ### Return type
 

@@ -6,9 +6,9 @@ Contract cancellable response object
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**identifier** | **str** | Booking contract identifier | [optional] 
+**identifier** | **UUID** | Booking contract identifier | [optional] 
 **cancellable** | **bool** | Whether the booking is cancellable or not | [optional] 
-**list** | **List[object]** |  | [optional] 
+**list** | [**List[BookingContractItemCancellableResponse]**](BookingContractItemCancellableResponse.md) |  | [optional] 
 
 ## Example
 

@@ -7,11 +7,11 @@ In case of LODGING, include daily rates
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **var_date** | **date** | The date this rate is applicable for. | 
-**price** | [**CustomMonetaryAmount**](CustomMonetaryAmount.md) |  | 
-**display_price** | [**CustomMonetaryAmount**](CustomMonetaryAmount.md) |  | 
-**supplier_price** | [**CustomMonetaryAmount**](CustomMonetaryAmount.md) |  | 
-**internal_price** | [**CustomMonetaryAmount**](CustomMonetaryAmount.md) |  | 
-**capture_price** | [**CustomMonetaryAmount**](CustomMonetaryAmount.md) |  | 
+**price** | [**CustomMonetaryAmount**](CustomMonetaryAmount.md) | The displayPrice of this item in the original displayPrice quoted in the TripPay contract. | 
+**display_price** | [**CustomMonetaryAmount**](CustomMonetaryAmount.md) | The displayPrice of this item converted to desired quote. | 
+**supplier_price** | [**CustomMonetaryAmount**](CustomMonetaryAmount.md) | The displayPrice of this item converted to supplier quote. | 
+**internal_price** | [**CustomMonetaryAmount**](CustomMonetaryAmount.md) | The internalPrice of this item. The price in platform currency. | 
+**capture_price** | [**CustomMonetaryAmount**](CustomMonetaryAmount.md) | The capturePrice of this item. The price we charged with the acquirer. | 
 
 ## Example
 

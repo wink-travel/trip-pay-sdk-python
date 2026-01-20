@@ -7,7 +7,7 @@ In case of LODGING, include daily rates
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **var_date** | **date** | The date this rate is applicable for. | 
-**price** | [**CustomMonetaryAmount**](CustomMonetaryAmount.md) |  | 
+**price** | [**CustomMonetaryAmount**](CustomMonetaryAmount.md) | The displayPrice of this item in the original displayPrice quoted in the TripPay contract. | 
 
 ## Example
 

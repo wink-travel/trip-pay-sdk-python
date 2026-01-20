@@ -5,12 +5,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **str** | Unique identifier. | 
+**id** | **UUID** | Unique identifier. | 
 **name** | **str** | Name of the application. | [optional] 
 **owner_identifier** | **str** | Owner ID. | 
 **owner_name** | **str** | Text representation of the value. | 
-**owner_type** | **str** | Type of entity. | 
-**redirect_uris** | **List[object]** |  | [optional] 
+**redirect_uris** | **List[str]** |  | [optional] 
 
 ## Example
 

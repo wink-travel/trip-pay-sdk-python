@@ -27,7 +27,7 @@ Name | Type | Description | Notes
 **supplier_amount_refund_modifier** | **float** | The delta from the original supplier amount after a refund occurred | 
 **internal_amount_refund_modifier** | **float** | The delta from the original internal amount after a refund occurred | 
 **capture_amount_refund_modifier** | **float** | The delta from the original capture amount after a refund occurred | 
-**pending_refunds** | **List[object]** |  | [optional] 
+**pending_refunds** | [**List[PendingRefund]**](PendingRefund.md) |  | [optional] 
 **net_source_amount** | **float** | Source amount minus source modifier. | 
 **net_display_amount** | **float** | Display amount minus display modifier. | 
 **net_supplier_amount** | **float** | Supplier amount minus supplier modifier. | 

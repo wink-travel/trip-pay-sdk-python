@@ -5,8 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**profile_identifier** | **str** | Profile identifier | 
-**user_identifier** | **str** | User identifier | 
+**profile_identifier** | **UUID** | Profile identifier | 
+**user_identifier** | **UUID** | User identifier | 
 **share** | **bool** | Indicates whether the user wants to share this profile of themselves with hotel(s) | 
 **user** | [**ProfileUser**](ProfileUser.md) | User details | 
 **personal** | [**Personal**](Personal.md) | Detailed customer information for this profile | 

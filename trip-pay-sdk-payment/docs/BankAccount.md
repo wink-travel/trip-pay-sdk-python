@@ -6,7 +6,7 @@ Accounts use bank accounts to get paid.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**identifier** | **str** | Unique bank account identifier | 
+**identifier** | **UUID** | Unique bank account identifier | 
 **country_code** | **str** | Country of bank account | 
 **currency_code** | **str** | Currency of bank account | 
 **account_holder_name** | **str** | Bank account holder name | 

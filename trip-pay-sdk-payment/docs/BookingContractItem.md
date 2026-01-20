@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 **policy** | [**SupplierContractItemPolicy**](SupplierContractItemPolicy.md) |  | [optional] 
 **external_identifier** | **str** | Optional externalIdentifier to remote inventory. | [optional] 
 **tokens_earned** | **int** | Tokens minted for this item | [optional] 
-**daily_rate_list** | **List[object]** |  | [optional] 
+**daily_rate_list** | [**List[DailyRate]**](DailyRate.md) |  | [optional] 
 **cancelled** | **bool** | Optional geoname externalIdentifier to remote inventory. | [optional] 
 **source_currency** | **str** | The source currency | 
 **display_currency** | **str** | The display currency | 
@@ -41,9 +41,9 @@ Name | Type | Description | Notes
 **net_capture_amount** | **float** | Capture amount minus capture modifier. | 
 **metadata** | **Dict[str, str]** | Place to add more data related to the booking contract item. | [optional] 
 **cancellable_by_supplier_or_agent** | **bool** | Whether the booking can still be cancelled by the supplier. A supplier cancellation overrides the refundable | [optional] 
-**cancellable_with_no_charges** | **bool** | Whether the booking can still be cancelled and whether cancellation charges might still occur. | [optional] 
 **cancellable_by_traveler** | **bool** | Whether the booking can still be cancelled by the traveller. | [optional] 
 **cancellable_with_potential_charges** | **bool** | Whether the booking can still be cancelled and whether cancellation charges might still occur. | [optional] 
+**cancellable_with_no_charges** | **bool** | Whether the booking can still be cancelled and whether cancellation charges might still occur. | [optional] 
 
 ## Example
 

@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**account_identifier** | **str** | Beneficiary account identifier | 
+**account_identifier** | **UUID** | Beneficiary account identifier | 
 **account_name** | **str** | Beneficiary account name | 
 **type** | **str** | Type of payment to beneficiary | 
 **total_items_sold** | **int** | Total items sold | 

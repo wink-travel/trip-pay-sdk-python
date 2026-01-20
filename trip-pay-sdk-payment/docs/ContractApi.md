@@ -61,7 +61,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
     api_instance = trip_pay_payment.ContractApi(api_client)
     identifier = 'identifier_example' # str | Booking contract identifier
     cancel_booking_contract_request = trip_pay_payment.CancelBookingContractRequest() # CancelBookingContractRequest | 
-    wink_version = 'wink_version_example' # str |  (optional)
+    wink_version = 2.0.0 # str |  (optional) (default to 2.0.0)
 
     try:
         # Cancel booking
@@ -81,7 +81,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | **str**| Booking contract identifier | 
  **cancel_booking_contract_request** | [**CancelBookingContractRequest**](CancelBookingContractRequest.md)|  | 
- **wink_version** | **str**|  | [optional] 
+ **wink_version** | **str**|  | [optional] [default to 2.0.0]
 
 ### Return type
 
@@ -141,7 +141,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
     api_instance = trip_pay_payment.ContractApi(api_client)
     trace_id = 'trace_id_example' # str | Booking contract traceId
     cancel_booking_contract_request = trip_pay_payment.CancelBookingContractRequest() # CancelBookingContractRequest | 
-    wink_version = 'wink_version_example' # str |  (optional)
+    wink_version = 2.0.0 # str |  (optional) (default to 2.0.0)
 
     try:
         # Cancel group bookings
@@ -161,7 +161,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **trace_id** | **str**| Booking contract traceId | 
  **cancel_booking_contract_request** | [**CancelBookingContractRequest**](CancelBookingContractRequest.md)|  | 
- **wink_version** | **str**|  | [optional] 
+ **wink_version** | **str**|  | [optional] [default to 2.0.0]
 
 ### Return type
 
@@ -220,7 +220,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = trip_pay_payment.ContractApi(api_client)
     payable_contract_request = trip_pay_payment.PayableContractRequest() # PayableContractRequest | 
-    wink_version = 'wink_version_example' # str |  (optional)
+    wink_version = 2.0.0 # str |  (optional) (default to 2.0.0)
 
     try:
         # Create payable contracts
@@ -239,7 +239,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **payable_contract_request** | [**PayableContractRequest**](PayableContractRequest.md)|  | 
- **wink_version** | **str**|  | [optional] 
+ **wink_version** | **str**|  | [optional] [default to 2.0.0]
 
 ### Return type
 
@@ -299,7 +299,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
     api_instance = trip_pay_payment.ContractApi(api_client)
     trace_id = 'trace_id_example' # str | Booking contract traceId
     immediate_refund_request = trip_pay_payment.ImmediateRefundRequest() # ImmediateRefundRequest | Accompanying payload that described the optional reason for using this endpoint.
-    wink_version = 'wink_version_example' # str |  (optional)
+    wink_version = 2.0.0 # str |  (optional) (default to 2.0.0)
 
     try:
         # Immediate group refund
@@ -319,7 +319,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **trace_id** | **str**| Booking contract traceId | 
  **immediate_refund_request** | [**ImmediateRefundRequest**](ImmediateRefundRequest.md)| Accompanying payload that described the optional reason for using this endpoint. | 
- **wink_version** | **str**|  | [optional] 
+ **wink_version** | **str**|  | [optional] [default to 2.0.0]
 
 ### Return type
 
@@ -379,7 +379,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
     api_instance = trip_pay_payment.ContractApi(api_client)
     identifier = 'identifier_example' # str | Booking contract identifier
     immediate_refund_request = trip_pay_payment.ImmediateRefundRequest() # ImmediateRefundRequest | Accompanying payload that described the optional reason for using this endpoint.
-    wink_version = 'wink_version_example' # str |  (optional)
+    wink_version = 2.0.0 # str |  (optional) (default to 2.0.0)
 
     try:
         # Immediate refund
@@ -399,7 +399,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | **str**| Booking contract identifier | 
  **immediate_refund_request** | [**ImmediateRefundRequest**](ImmediateRefundRequest.md)| Accompanying payload that described the optional reason for using this endpoint. | 
- **wink_version** | **str**|  | [optional] 
+ **wink_version** | **str**|  | [optional] [default to 2.0.0]
 
 ### Return type
 
@@ -459,7 +459,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
     api_instance = trip_pay_payment.ContractApi(api_client)
     identifier = 'identifier_example' # str | Booking contract identifier
     cancel_booking_contract_request = trip_pay_payment.CancelBookingContractRequest() # CancelBookingContractRequest | 
-    wink_version = 'wink_version_example' # str |  (optional)
+    wink_version = 2.0.0 # str |  (optional) (default to 2.0.0)
 
     try:
         # Contract cancellable
@@ -479,7 +479,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | **str**| Booking contract identifier | 
  **cancel_booking_contract_request** | [**CancelBookingContractRequest**](CancelBookingContractRequest.md)|  | 
- **wink_version** | **str**|  | [optional] 
+ **wink_version** | **str**|  | [optional] [default to 2.0.0]
 
 ### Return type
 
@@ -539,7 +539,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
     api_instance = trip_pay_payment.ContractApi(api_client)
     trace_id = 'trace_id_example' # str | Booking contract traceId
     cancel_booking_contract_request = trip_pay_payment.CancelBookingContractRequest() # CancelBookingContractRequest | 
-    wink_version = 'wink_version_example' # str |  (optional)
+    wink_version = 2.0.0 # str |  (optional) (default to 2.0.0)
     accept = 'accept_example' # str |  (optional)
 
     try:
@@ -560,7 +560,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **trace_id** | **str**| Booking contract traceId | 
  **cancel_booking_contract_request** | [**CancelBookingContractRequest**](CancelBookingContractRequest.md)|  | 
- **wink_version** | **str**|  | [optional] 
+ **wink_version** | **str**|  | [optional] [default to 2.0.0]
  **accept** | **str**|  | [optional] 
 
 ### Return type
@@ -621,7 +621,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
     api_instance = trip_pay_payment.ContractApi(api_client)
     identifier = 'identifier_example' # str | Booking contract identifier
     refund_request = trip_pay_payment.RefundRequest() # RefundRequest | 
-    wink_version = 'wink_version_example' # str |  (optional)
+    wink_version = 2.0.0 # str |  (optional) (default to 2.0.0)
 
     try:
         # Request refund
@@ -641,7 +641,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | **str**| Booking contract identifier | 
  **refund_request** | [**RefundRequest**](RefundRequest.md)|  | 
- **wink_version** | **str**|  | [optional] 
+ **wink_version** | **str**|  | [optional] [default to 2.0.0]
 
 ### Return type
 
@@ -700,7 +700,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
     api_instance = trip_pay_payment.ContractApi(api_client)
     account_identifier = 'account_identifier_example' # str | 
     type = 'type_example' # str |  (optional)
-    wink_version = 'wink_version_example' # str |  (optional)
+    wink_version = 2.0.0 # str |  (optional) (default to 2.0.0)
     accept = 'accept_example' # str |  (optional)
 
     try:
@@ -721,7 +721,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **account_identifier** | **str**|  | 
  **type** | **str**|  | [optional] 
- **wink_version** | **str**|  | [optional] 
+ **wink_version** | **str**|  | [optional] [default to 2.0.0]
  **accept** | **str**|  | [optional] 
 
 ### Return type
@@ -780,7 +780,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = trip_pay_payment.ContractApi(api_client)
     account_identifier = 'account_identifier_example' # str | 
-    wink_version = 'wink_version_example' # str |  (optional)
+    wink_version = 2.0.0 # str |  (optional) (default to 2.0.0)
     accept = 'accept_example' # str |  (optional)
 
     try:
@@ -800,7 +800,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **account_identifier** | **str**|  | 
- **wink_version** | **str**|  | [optional] 
+ **wink_version** | **str**|  | [optional] [default to 2.0.0]
  **accept** | **str**|  | [optional] 
 
 ### Return type
@@ -860,7 +860,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
     api_instance = trip_pay_payment.ContractApi(api_client)
     account_identifier = 'account_identifier_example' # str | 
     state = 'state_example' # str |  (optional)
-    wink_version = 'wink_version_example' # str |  (optional)
+    wink_version = 2.0.0 # str |  (optional) (default to 2.0.0)
     accept = 'accept_example' # str |  (optional)
 
     try:
@@ -881,7 +881,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **account_identifier** | **str**|  | 
  **state** | **str**|  | [optional] 
- **wink_version** | **str**|  | [optional] 
+ **wink_version** | **str**|  | [optional] [default to 2.0.0]
  **accept** | **str**|  | [optional] 
 
 ### Return type
@@ -940,7 +940,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = trip_pay_payment.ContractApi(api_client)
     identifier = 'identifier_example' # str | Booking contract identifier
-    wink_version = 'wink_version_example' # str |  (optional)
+    wink_version = 2.0.0 # str |  (optional) (default to 2.0.0)
     accept = 'accept_example' # str |  (optional)
 
     try:
@@ -960,7 +960,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | **str**| Booking contract identifier | 
- **wink_version** | **str**|  | [optional] 
+ **wink_version** | **str**|  | [optional] [default to 2.0.0]
  **accept** | **str**|  | [optional] 
 
 ### Return type
@@ -1020,7 +1020,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
     api_instance = trip_pay_payment.ContractApi(api_client)
     external_account_identifier = 'external_account_identifier_example' # str | Show contract owned by this external account
     booking_contract_identifier = 'booking_contract_identifier_example' # str | Booking contract identifier
-    wink_version = 'wink_version_example' # str |  (optional)
+    wink_version = 2.0.0 # str |  (optional) (default to 2.0.0)
     accept = 'accept_example' # str |  (optional)
 
     try:
@@ -1041,7 +1041,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **external_account_identifier** | **str**| Show contract owned by this external account | 
  **booking_contract_identifier** | **str**| Booking contract identifier | 
- **wink_version** | **str**|  | [optional] 
+ **wink_version** | **str**|  | [optional] [default to 2.0.0]
  **accept** | **str**|  | [optional] 
 
 ### Return type
@@ -1102,7 +1102,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
     account_identifier = 'account_identifier_example' # str | The account owner
     state = 'state_example' # str | The optional state to want to receive funds for (optional)
     account_funds_only = False # bool | Whether to only returns funds for that account identifier or total funds that account identifier was part of. (defaults to false). (optional) (default to False)
-    wink_version = 'wink_version_example' # str |  (optional)
+    wink_version = 2.0.0 # str |  (optional) (default to 2.0.0)
     accept = 'accept_example' # str |  (optional)
 
     try:
@@ -1124,7 +1124,7 @@ Name | Type | Description  | Notes
  **account_identifier** | **str**| The account owner | 
  **state** | **str**| The optional state to want to receive funds for | [optional] 
  **account_funds_only** | **bool**| Whether to only returns funds for that account identifier or total funds that account identifier was part of. (defaults to false). | [optional] [default to False]
- **wink_version** | **str**|  | [optional] 
+ **wink_version** | **str**|  | [optional] [default to 2.0.0]
  **accept** | **str**|  | [optional] 
 
 ### Return type
@@ -1187,7 +1187,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
     state2 = trip_pay_payment.State() # State | The optional state to filter on
     state = 'state_example' # str | The optional state to want to receive funds for (optional)
     account_funds_only = False # bool | Whether to only returns funds for that account identifier or total funds that account identifier was part of. (defaults to false). (optional) (default to False)
-    wink_version = 'wink_version_example' # str |  (optional)
+    wink_version = 2.0.0 # str |  (optional) (default to 2.0.0)
 
     try:
         # Retrieve contract grid
@@ -1209,7 +1209,7 @@ Name | Type | Description  | Notes
  **state2** | [**State**](State.md)| The optional state to filter on | 
  **state** | **str**| The optional state to want to receive funds for | [optional] 
  **account_funds_only** | **bool**| Whether to only returns funds for that account identifier or total funds that account identifier was part of. (defaults to false). | [optional] [default to False]
- **wink_version** | **str**|  | [optional] 
+ **wink_version** | **str**|  | [optional] [default to 2.0.0]
 
 ### Return type
 
@@ -1267,7 +1267,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = trip_pay_payment.ContractApi(api_client)
     trace_id = 'trace_id_example' # str | Trace identifier
-    wink_version = 'wink_version_example' # str |  (optional)
+    wink_version = 2.0.0 # str |  (optional) (default to 2.0.0)
     accept = 'accept_example' # str |  (optional)
 
     try:
@@ -1287,7 +1287,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **trace_id** | **str**| Trace identifier | 
- **wink_version** | **str**|  | [optional] 
+ **wink_version** | **str**|  | [optional] [default to 2.0.0]
  **accept** | **str**|  | [optional] 
 
 ### Return type
@@ -1347,7 +1347,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
     api_instance = trip_pay_payment.ContractApi(api_client)
     external_account_identifier = 'external_account_identifier_example' # str | Show contract owned by this external account
     external_booking_contract_identifier = 'external_booking_contract_identifier_example' # str | External booking contract identifier
-    wink_version = 'wink_version_example' # str |  (optional)
+    wink_version = 2.0.0 # str |  (optional) (default to 2.0.0)
     accept = 'accept_example' # str |  (optional)
 
     try:
@@ -1368,7 +1368,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **external_account_identifier** | **str**| Show contract owned by this external account | 
  **external_booking_contract_identifier** | **str**| External booking contract identifier | 
- **wink_version** | **str**|  | [optional] 
+ **wink_version** | **str**|  | [optional] [default to 2.0.0]
  **accept** | **str**|  | [optional] 
 
 ### Return type
@@ -1428,7 +1428,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
     api_instance = trip_pay_payment.ContractApi(api_client)
     transient_contract_identifier = 'contract-1' # str | Transient contract to retrieve
     currency = 'contract-1' # str | Desired currency (optional)
-    wink_version = 'wink_version_example' # str |  (optional)
+    wink_version = 2.0.0 # str |  (optional) (default to 2.0.0)
     accept = 'accept_example' # str |  (optional)
 
     try:
@@ -1449,7 +1449,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **transient_contract_identifier** | **str**| Transient contract to retrieve | 
  **currency** | **str**| Desired currency | [optional] 
- **wink_version** | **str**|  | [optional] 
+ **wink_version** | **str**|  | [optional] [default to 2.0.0]
  **accept** | **str**|  | [optional] 
 
 ### Return type

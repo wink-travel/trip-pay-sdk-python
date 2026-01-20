@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 **trace_id** | **str** | Way to track which booking contracts were made together | 
 **source_url** | **str** | Where did the booking occur | 
 **identifier** | **str** | Unique identifier used to track the contract. | 
-**supplier_identifier** | **str** | Supplier identifier | 
+**supplier_identifier** | **UUID** | Supplier identifier | 
 **supplier_name** | **str** | Supplier name | 
 **display_price_quote** | [**QuoteLightweight**](QuoteLightweight.md) | The quote used to create displayAmount. | 
 **supplier_price_quote** | [**QuoteLightweight**](QuoteLightweight.md) | The quote used to create supplierAmount. | 
@@ -34,8 +34,8 @@ Name | Type | Description | Notes
 **canceller_user_identifier** | **str** | User identifier that cancelled the entity. | [optional] 
 **cancel_reason** | **str** | Reason for cancellation. | [optional] 
 **funds_processed** | **bool** | Whether all funds have been processed for this booking. | [optional] 
-**refunds** | **List[object]** |  | [optional] 
-**payouts** | **List[object]** |  | [optional] 
+**refunds** | [**List[Refund]**](Refund.md) |  | [optional] 
+**payouts** | [**List[Payout]**](Payout.md) |  | [optional] 
 **source_currency** | **str** | The source currency | 
 **display_currency** | **str** | The display currency | 
 **supplier_currency** | **str** | The supplier currency | 
@@ -153,11 +153,11 @@ Name | Type | Description | Notes
 **total_funds_grouped_by_beneficiary** | [**List[Beneficiary]**](Beneficiary.md) | Returns all the beneficiaries in this contract with their total amounts | [optional] 
 **total_tokens_earned** | **int** | Sums up all tokens earned on the contract | [optional] 
 **cancellable_by_supplier_or_agent** | **bool** | Whether the booking can still be cancelled completely by the supplier. | [optional] 
-**cancellable_with_no_charges** | **bool** | Whether the cancellation comes at no cost to the traveler. | [optional] 
-**refunded** | **bool** |  | [optional] 
 **cancellable_by_traveler** | **bool** | Whether the booking can still be cancelled completely by the traveller. | [optional] 
 **cancellable_with_potential_charges** | **bool** | Whether a cancellation comes with partial charges. I.e. Only some of the items in contract are not fully refundable. | [optional] 
 **refundable** | **bool** |  | [optional] 
+**cancellable_with_no_charges** | **bool** | Whether the cancellation comes at no cost to the traveler. | [optional] 
+**refunded** | **bool** |  | [optional] 
 
 ## Example
 

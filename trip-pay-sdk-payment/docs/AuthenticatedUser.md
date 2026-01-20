@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**user_identifier** | **str** | User identifier | [optional] 
+**user_identifier** | **UUID** | User identifier | [optional] 
 **first_name** | **str** | First name | 
 **last_name** | **str** | Last name | 
 **email** | **str** | Email | 

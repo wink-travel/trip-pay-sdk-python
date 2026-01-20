@@ -43,7 +43,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = trip_pay_payment.AgentApi(api_client)
     create_agent_sale_request = trip_pay_payment.CreateAgentSaleRequest() # CreateAgentSaleRequest | 
-    wink_version = 'wink_version_example' # str |  (optional)
+    wink_version = 2.0.0 # str |  (optional) (default to 2.0.0)
 
     try:
         # Create Agent Payment
@@ -62,7 +62,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **create_agent_sale_request** | [**CreateAgentSaleRequest**](CreateAgentSaleRequest.md)|  | 
- **wink_version** | **str**|  | [optional] 
+ **wink_version** | **str**|  | [optional] [default to 2.0.0]
 
 ### Return type
 

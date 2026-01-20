@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **str** | Unique identifier. | 
+**id** | **UUID** | Unique identifier. | 
 **client_id** | **str** | Client identifier used to authenticate an Oauth2 or web component request. | 
 **secret_key** | **str** | Password used to authenticate an Oauth2 request. | 
 

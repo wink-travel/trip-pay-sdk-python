@@ -43,7 +43,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = trip_pay_payment.AffiliateApi(api_client)
     affiliate_details_request = trip_pay_payment.AffiliateDetailsRequest() # AffiliateDetailsRequest | 
-    wink_version = 'wink_version_example' # str |  (optional)
+    wink_version = 2.0.0 # str |  (optional) (default to 2.0.0)
 
     try:
         # Show Affiliate Details
@@ -62,7 +62,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **affiliate_details_request** | [**AffiliateDetailsRequest**](AffiliateDetailsRequest.md)|  | 
- **wink_version** | **str**|  | [optional] 
+ **wink_version** | **str**|  | [optional] [default to 2.0.0]
 
 ### Return type
 

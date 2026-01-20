@@ -6,7 +6,7 @@ Affiliate details response contains details about the affiliate facilitating the
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**affiliate_identifier** | **str** | Affiliate identifier of entity making the same | [optional] 
+**affiliate_identifier** | **UUID** | Affiliate identifier of entity making the same | [optional] 
 **affiliate_name** | **str** | Affiliate name of entity making the same | [optional] 
 **affiliate_url** | **str** | Affiliate url of entity making the same | [optional] 
 

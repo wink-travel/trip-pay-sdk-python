@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**address** | [**UpsertAddressRequest**](UpsertAddressRequest.md) | Confirmed address. | [optional] 
+**address** | [**SimpleAddress**](SimpleAddress.md) | Confirmed address. | [optional] 
 **owner_type** | **str** | Whether the account is a company or individual. | [optional] 
 **owner_type_identifier** | **str** | Either the TIN (individual) or the EIN (company) number of the individual. | [optional] 
 **dob** | **date** | Date of birth in the case of an individual. | [optional] 

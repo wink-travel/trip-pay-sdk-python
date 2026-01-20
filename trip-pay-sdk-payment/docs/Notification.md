@@ -9,15 +9,16 @@ Name | Type | Description | Notes
 **created_date** | **datetime** | Datetime this record was first created | [optional] 
 **last_update** | **datetime** | Datetime this record was last updated | [optional] 
 **version** | **int** | Version property that shows how many times this document has been persisted. Document will not persist if the version property is less than current version property in the system. Result in an optimistic locking exception. | [optional] 
-**owner_identifier** | **str** | Owner identifier | 
+**user_identifier** | **UUID** | Owner identifier | 
+**managing_entity_identifier** | **UUID** | ManagingEntity identifier | [optional] 
+**name** | **str** | Owner name | [optional] 
 **priority** | **str** | Importance of message | 
 **type** | **str** | Message type | 
 **recipient_type** | **str** | Recipient type | 
-**application** | **str** | Application domain | 
 **message_template_id** | **str** | Message template | 
 **subject** | **str** | Subject of message | 
 **body** | **str** | Subject of message | 
-**cta_url** | **str** | Path to feature | 
+**cta_url** | **str** | Path to feature | [optional] 
 **read** | **bool** | AffiliateAccount read announcement | [optional] 
 **marked_as_removed** | **bool** | Message marked as removed | [optional] 
 **notify_via_email** | **bool** | Also send email announcement | [optional] 

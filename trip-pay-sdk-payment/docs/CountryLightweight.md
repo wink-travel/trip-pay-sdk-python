@@ -21,9 +21,9 @@ Name | Type | Description | Notes
 **phone** | **str** | Calling code | [optional] 
 **postal_code_format** | **str** | Postal code format | [optional] 
 **postal_code_reg_ex** | **str** | Postal code regular expression | [optional] 
-**languages** | **List[object]** |  | [optional] 
+**languages** | **List[str]** | Country languages | [optional] 
 **geo_name_id** | **str** | Country GeoNames identifier | [optional] 
-**neighbors** | **List[object]** |  | [optional] 
+**neighbors** | **List[str]** | Neighboring countries | [optional] 
 
 ## Example
 

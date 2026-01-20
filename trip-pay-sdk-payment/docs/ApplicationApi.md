@@ -48,7 +48,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = trip_pay_payment.ApplicationApi(api_client)
     upsert_application_request = trip_pay_payment.UpsertApplicationRequest() # UpsertApplicationRequest | 
-    wink_version = 'wink_version_example' # str |  (optional)
+    wink_version = 2.0.0 # str |  (optional) (default to 2.0.0)
 
     try:
         # Create Application
@@ -67,7 +67,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **upsert_application_request** | [**UpsertApplicationRequest**](UpsertApplicationRequest.md)|  | 
- **wink_version** | **str**|  | [optional] 
+ **wink_version** | **str**|  | [optional] [default to 2.0.0]
 
 ### Return type
 
@@ -125,7 +125,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = trip_pay_payment.ApplicationApi(api_client)
     id = 'id_example' # str | 
-    wink_version = 'wink_version_example' # str |  (optional)
+    wink_version = 2.0.0 # str |  (optional) (default to 2.0.0)
     accept = 'accept_example' # str |  (optional)
 
     try:
@@ -145,7 +145,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**|  | 
- **wink_version** | **str**|  | [optional] 
+ **wink_version** | **str**|  | [optional] [default to 2.0.0]
  **accept** | **str**|  | [optional] 
 
 ### Return type
@@ -204,7 +204,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = trip_pay_payment.ApplicationApi(api_client)
     id = 'id_example' # str | 
-    wink_version = 'wink_version_example' # str |  (optional)
+    wink_version = 2.0.0 # str |  (optional) (default to 2.0.0)
     accept = 'accept_example' # str |  (optional)
 
     try:
@@ -224,7 +224,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**|  | 
- **wink_version** | **str**|  | [optional] 
+ **wink_version** | **str**|  | [optional] [default to 2.0.0]
  **accept** | **str**|  | [optional] 
 
 ### Return type
@@ -283,7 +283,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = trip_pay_payment.ApplicationApi(api_client)
     id = 'id_example' # str | 
-    wink_version = 'wink_version_example' # str |  (optional)
+    wink_version = 2.0.0 # str |  (optional) (default to 2.0.0)
     accept = 'accept_example' # str |  (optional)
 
     try:
@@ -303,7 +303,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**|  | 
- **wink_version** | **str**|  | [optional] 
+ **wink_version** | **str**|  | [optional] [default to 2.0.0]
  **accept** | **str**|  | [optional] 
 
 ### Return type
@@ -361,7 +361,7 @@ configuration.access_token = os.environ["ACCESS_TOKEN"]
 with trip_pay_payment.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = trip_pay_payment.ApplicationApi(api_client)
-    wink_version = 'wink_version_example' # str |  (optional)
+    wink_version = 2.0.0 # str |  (optional) (default to 2.0.0)
     accept = 'accept_example' # str |  (optional)
 
     try:
@@ -380,7 +380,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **wink_version** | **str**|  | [optional] 
+ **wink_version** | **str**|  | [optional] [default to 2.0.0]
  **accept** | **str**|  | [optional] 
 
 ### Return type
@@ -441,7 +441,7 @@ with trip_pay_payment.ApiClient(configuration) as api_client:
     api_instance = trip_pay_payment.ApplicationApi(api_client)
     id = 'id_example' # str | 
     upsert_application_request = trip_pay_payment.UpsertApplicationRequest() # UpsertApplicationRequest | 
-    wink_version = 'wink_version_example' # str |  (optional)
+    wink_version = 2.0.0 # str |  (optional) (default to 2.0.0)
 
     try:
         # Update Application
@@ -461,7 +461,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**|  | 
  **upsert_application_request** | [**UpsertApplicationRequest**](UpsertApplicationRequest.md)|  | 
- **wink_version** | **str**|  | [optional] 
+ **wink_version** | **str**|  | [optional] [default to 2.0.0]
 
 ### Return type
 

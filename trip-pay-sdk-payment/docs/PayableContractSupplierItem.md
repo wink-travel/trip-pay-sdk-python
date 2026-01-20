@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 **payable** | **str** | When to charge for this item. | 
 **policy** | [**SupplierContractItemPolicy**](SupplierContractItemPolicy.md) |  | [optional] 
 **external_identifier** | **str** | Optional geoname externalIdentifier to remote inventory. | [optional] 
-**daily_rate_list** | **List[object]** |  | [optional] 
+**daily_rate_list** | [**List[RawDailyRate]**](RawDailyRate.md) |  | [optional] 
 **metadata** | **Dict[str, str]** | Place to add more data related to the booking contract item. | [optional] 
 
 ## Example
