@@ -11,8 +11,8 @@ Name | Type | Description | Notes
 **adults** | **int** | Number of adults | 
 **children** | **int** | Number of children | 
 **hours** | **int** | Number of hours between start and end dates. Used for itineraries that require bookings that occur within hours and not days. E.g. Meeting room reservation. | [optional] [readonly] 
-**guests** | **int** | Total number of adults and children | [optional] [readonly] 
 **nights** | **int** | Total number of room nights | [optional] [readonly] 
+**guests** | **int** | Total number of adults and children | [optional] [readonly] 
 
 ## Example
 
