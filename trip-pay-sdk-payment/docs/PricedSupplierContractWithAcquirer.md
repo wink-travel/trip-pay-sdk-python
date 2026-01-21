@@ -26,10 +26,10 @@ Name | Type | Description | Notes
 **external_transaction_identifier** | **str** | External transaction identifier populated when agent responsible for acquiring | 
 **metadata** | **Dict[str, str]** | Place to add more data related to the booking contract. | [optional] 
 **total_price** | [**CustomMonetaryAmount**](CustomMonetaryAmount.md) |  | [optional] 
+**total_capture_price** | [**CustomMonetaryAmount**](CustomMonetaryAmount.md) |  | [optional] 
 **total_display_price** | [**CustomMonetaryAmount**](CustomMonetaryAmount.md) |  | [optional] 
 **total_supplier_price** | [**CustomMonetaryAmount**](CustomMonetaryAmount.md) |  | [optional] 
 **total_internal_price** | [**CustomMonetaryAmount**](CustomMonetaryAmount.md) |  | [optional] 
-**total_capture_price** | [**CustomMonetaryAmount**](CustomMonetaryAmount.md) |  | [optional] 
 
 ## Example
 
