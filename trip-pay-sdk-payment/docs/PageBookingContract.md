@@ -5,16 +5,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**total_pages** | **int** |  | [optional] 
 **total_elements** | **int** |  | [optional] 
+**total_pages** | **int** |  | [optional] 
 **size** | **int** |  | [optional] 
 **content** | [**List[BookingContract]**](BookingContract.md) |  | [optional] 
 **number** | **int** |  | [optional] 
+**number_of_elements** | **int** |  | [optional] 
+**pageable** | [**PageableObjectPayment**](PageableObjectPayment.md) |  | [optional] 
+**sort** | [**SortObjectPayment**](SortObjectPayment.md) |  | [optional] 
 **first** | **bool** |  | [optional] 
 **last** | **bool** |  | [optional] 
-**number_of_elements** | **int** |  | [optional] 
-**sort** | [**SortObjectPayment**](SortObjectPayment.md) |  | [optional] 
-**pageable** | [**PageableObjectPayment**](PageableObjectPayment.md) |  | [optional] 
 **empty** | **bool** |  | [optional] 
 
 ## Example
