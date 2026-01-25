@@ -6,10 +6,10 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **offset** | **int** |  | [optional] 
-**paged** | **bool** |  | [optional] 
 **page_number** | **int** |  | [optional] 
-**page_size** | **int** |  | [optional] 
 **unpaged** | **bool** |  | [optional] 
+**paged** | **bool** |  | [optional] 
+**page_size** | **int** |  | [optional] 
 **sort** | [**SortObjectPayment**](SortObjectPayment.md) |  | [optional] 
 
 ## Example
